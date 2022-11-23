@@ -1,0 +1,36 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<%namespace file='../main.html' import="login_query"/>
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<section class="page-hero-banner contact-page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col"><h1>${_("Contact Us")}</h1></div>
+        </div>
+    </div>
+</section>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container contact-page-content">
+        <div class="col-md-4 block_left  wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+			<div class="leftfocus">
+			<h2 class="cal">مركز المرأة العربية للتدريب والبحوث</h2>
+			<div class="news_area">
+			<h3 class="titre_left">العنوان البريدي</h3>
+			<p class="address">ص.ب. 105، 1003 حي الخضراء ، <br>تونس-الجمهورية التونسية</p>
+			</div>
+			<div class="news_area">
+			<h3 class="titre_left">معطيات التواصل</h3>
+			<p class="address"><strong>الهاتف : </strong><a href="tel:+21671790511">(+216) 71 790 511 </a><br><strong>الفاكس : </strong> (+216) 71 773-611 / (+216) 71 780 002 <br><strong>البريد الإلكتروني : </strong> <a href="mailto:info@cawtar.org">info@cawtar.org</a></p>
+			</div>
+			<div class="news_area">
+			<h3 class="titre_left">مواقع الويب</h3>
+			<p class="address"><strong>الإعلام : </strong><a href="mailto:media@cawtar.org" class="blue_txt"><strong>media@cawtar.org</strong></a><br><strong>المالية : </strong><a href="mailto:finance@cawtar.org" class="blue_txt"><strong>finance@cawtar.org</strong></a><br><strong>التوثيق : </strong><a href="mailto:documentation@cawtar.org" class="blue_txt"><strong>documentation@cawtar.org</strong></a></p>
+			</div>
+			</div>
+			</div>
+    </section>
+</main>

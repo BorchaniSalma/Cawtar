@@ -1,0 +1,31 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<%namespace file='../main.html' import="login_query"/>
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<section class="page-hero-banner contact-page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col"><h1>${_("Contact Us")}</h1></div>
+        </div>
+    </div>
+</section>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container contact-page-content">
+        <p>Find answers to your questions in our <a href="/about#faq-section">FAQ section<a>.
+        </p>
+        <hr class="mtb-40">
+        <p>Sign in to MIT Open Learning Library so we can help you better.</p>
+        <div class="btn-container">
+            <%block name="logistrationblock">
+            <a href="/login${login_query()}" class="btn">${_("Sign in")}</a>
+            <a href="/register${login_query()}" class="btn">${_("Create an MIT Open Learning Library account")}</a>
+            </%block>
+        </div>
+        <p>If you did not receive your activation email or are unable to access your account, please refer to our <a href="/about#faq-section">FAQs<a>.
+        </p>
+    </section>
+</main>

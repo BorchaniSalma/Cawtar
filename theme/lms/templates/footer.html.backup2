@@ -1,0 +1,99 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.urls import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+  from datetime import datetime
+  import pytz
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+%>
+<%
+# set doc language direction
+from django.utils.translation import get_language_bidi
+dir_rtl = 'rtl' if get_language_bidi() else 'ltr'
+course_mode_class = course_mode if course_mode else ''
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer" dir="${dir_rtl}">
+  <footer id="footer-openedx" class="grid-container"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
+    <div class="colophon">
+      <nav class="nav-colophon" aria-label="${_('About')}">
+		<ol>
+		   <div class="footer__company-info">
+			  <div class="footer__logos">
+				 <div class="footer__hrdf-logo">
+					<a aria-label="كوثر" href="http://www.cawtar.org" target="_blank">
+					<img src="http://www.cawtar.org/front/assets/images/logo.png" alt="منصة كوثر للتدريب الإلكتروني" style="margin: 10px 0px; font-size: 16px;">
+					</a>
+				 </div>
+			  </div>
+			  <div class="footer__terms-privacy" style="">
+				 <p style="width: 14em; margin: 20px 0px; display: inline-block; font-size: 16px; font-style: normal; line-height: 1em;">
+					دروب' هي المنصة الوطنيّة للتدريب الإلكتروني وهي إحدى مبادرات صندوق تنمية الموارد البشرية 'هدف' التي تسعى إلى تمكين القوى العاملة الوطنيّة من تطوير قدراتهم ومهاراتهم.
+				 </p>
+			  </div>
+		   </div>
+		</ol>
+        <ol>
+          <li class="list-title">${_("Open Learning Library")}</li>
+          <li><a href="${marketing_link('ABOUT')}">${_("About")}</a></li>
+          <li><a href="${marketing_link('COURSES')}">${_("All Courses")}</a></li>
+          </ol>
+        <ul>
+          <li class="list-title">${_("Connect")}</li>
+          <li>
+            <a href="${marketing_link('CONTACT')}">${_("Contact")}</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/CAWTAR_ONG" target="_blank">${_("Twitter")}</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/CenterofArabWomenforTrainingandResearch" target="_blank">${_("Facebook")}</a>
+          </li>
+        </ul>
+      </nav>
+
+      % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+          <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+      % endif
+
+    </div>
+  </footer>
+
+  <footer id="footer-bottom">
+    <div class="container">
+      <nav class="nav-legal" aria-label="${_('Legal')}">
+        <ul class="list-inline">
+          % for item_num, link in enumerate(footer['legal_links'][:-1], start=1):
+            <li class="nav-legal-0${item_num}" style="float: left;">
+              <a href="${link['url']}">${link['title']}</a>
+            </li>
+          % endfor
+        </ul>
+      </nav>
+      <p class="copyright">&copy; ${_("Kawthar e-learning platform,")} ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year}</p>
+    </div>
+  </footer>
+</div>
+
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif

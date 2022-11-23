@@ -1,0 +1,127 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<section class="page-hero-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col"><h1>${_("Who we are ?")}</h1></div>
+        </div>
+    </div>
+</section>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about-block">
+        <div class="row">
+            <div class="about-content">
+                <p>${_("The Center of Arab Women for Training and Research (CAWTAR) was created in 1993, in response to the desire expressed by a number of Arab stakeholders, including local, regional and international institutions as well as governments, to establish a center of academic research and field studies relating to women’s conditions.")}</p>
+                <p>${_("In addition to collecting data, indicators and statistics on women’s economic, social and political conditions, CAWTAR significantly contributes to capacity building of stakeholders, enhancing networking, building strategic partnership and strengthening advocacy for women’s rights.")}</p>
+                <section id="faq-section">
+                    <h3 class="section-title">Frequently Asked Questions</h3>
+                    <button id="btn_expand_faqs" class="btn btn-outline-primary">Expand All</button>
+                    <button id="btn_minimise_faqs" class="btn btn-outline-primary">Minimise All</button>
+
+                    <div class="accordion">
+                       <div class="item">
+                            <div class="accordion-title">I did not receive my activation email, what do I do?</div>
+                            <div class="accordion-content">
+                                <p>Please check your SPAM and/or Junk folders to see if the activation email has been flagged as junk. If the email is not there, please visit <a href="https://openlearninglibrary.mit.edu/login">the login page</a> and use the 'forgot password' link to resend the activation email. If you still do not receive the email, please contact our support team at <a class="link-email" href="mailto:&#109;&#105;&#116;&#111;&#108;&#108;&#045;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#109;&#105;&#116;&#046;&#101;&#100;&#117;">&#109;&#105;&#116;&#111;&#108;&#108;&#045;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#109;&#105;&#116;&#046;&#101;&#100;&#117;</a>.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">Do I have to pay for access to any part of the site?</div>
+                            <div class="accordion-content">
+                                <p>No. There are no fees associated with the Open Learning Library. All content is freely accessible.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">Can I earn a certificate for a course on Open Learning Library?</div>
+                            <div class="accordion-content">
+                                <p>No. If you’re interested in earning a certificate in an MITx course, please visit <a href="https://www.edx.org/" target="_blank">edX.org</a> and sign up for the next available certificate run of the course. We will strive to provide direct links to courses with a certificate option on edX.org whenever they are available.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">How can I find out when the next certificate run of a course will happen on edX.org?</div>
+                            <div class="accordion-content">
+                                <p>On each course About Page, you will see a banner with updated edX information on it, and a link through to the course there. Additionally, you can sign up for the <a href="http://eepurl.com/b_COMD" target="_blank">MITx mailing list</a> to receive information about all of our courses and programs.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">Do these courses have discussion forums or teaching assistants to answer my questions?</div>
+                            <div class="accordion-content">
+                                <p>No. The Open Learning Library provides only self-guided course materials. If you have a technical issue with the site, you can contact <a class="link-email" href="mailto:&#109;&#105;&#116;&#111;&#108;&#108;&#045;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#109;&#105;&#116;&#046;&#101;&#100;&#117;">&#109;&#105;&#116;&#111;&#108;&#108;&#045;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#109;&#105;&#116;&#046;&#101;&#100;&#117;</a>, but we will not have support staff available for topic-based questions. If you wish to join a discussion forum as you learn, please wait for the next run of the course you are interested in on edX.org.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">Do I have to create an account to access courses?</div>
+                            <div class="accordion-content">
+                                <p>It depends. We are using the <a href="https://open.edx.org/" target="_blank">Open edX platform</a> for running course content on the Open Learning Library. Creating an account will allow you to access all courses, keep track of your progress, and see the answers you have submitted within the course. If you do not wish to create an account, we do offer several courses that do not require an account/registration but your course progress will not be tracked. </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">Can I use my edx.org account?</div>
+                            <div class="accordion-content">
+                                <p>No. This is a separate site.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">I am looking for material that is not covered in the MIT Open Learning Library.  Where can I find it?</div>
+                            <div class="accordion-content">
+                                <p>You can check at <a href="https://ocw.mit.edu/index.htm" target="_blank">OCW</a> or <a href="https://openlearning.mit.edu/beyond-campus/mitx-edx-moocs/courses" target="_blank">MITx on edX</a>.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">How does the MIT Open Learning Library differ from MIT OpenCourseWare or MITx courses on edX?</div>
+                            <div class="accordion-content">
+                                <p>You can think of the three different resources as a spectrum of offerings utilizing MIT content for different types of learning experiences. On one end is edX.org — MITx courses on edX are end-to-end course experiences with certificates available for you to earn, live teaching support in a discussion forum, and start and end dates. On the other end is MIT OCW, which is a completely self-guided experience containing published content from MIT courses that is open all of the time and licensed for reuse, but that does not include any interactive content. Open Learning Library sits in between. As in many MITx courses, Open Learning Library provides interactive course experiences that include auto-graded assessments that give you instant feedback and allow you to track your progress as you work your way through learning the subject matter. Like OCW, this content is always open and self-guided and includes no live support, discussion forum, or certificates.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">I’m interested in a MicroMasters program. Are these courses part of the Open Learning Library?</div>
+                            <div class="accordion-content">
+                                <p>No. We are not offering any MicroMasters program content on the Open Learning Library. Please visit <a href="https://micromasters.mit.edu/" target="_blank">micromasters.mit.edu</a> for more information on our programs.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">Can I download material from Open Learning Library?</div>
+                            <div class="accordion-content">
+                                <p>Only if the material is Creative Commons-licensed, as is the case for all material from MIT OpenCourseWare.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">I’m having a problem using the site. How can I get help?</div>
+                            <div class="accordion-content">
+                                <p>Send an email to <a class="link-email" href="mailto:&#109;&#105;&#116;&#111;&#108;&#108;&#045;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#109;&#105;&#116;&#046;&#101;&#100;&#117;">&#109;&#105;&#116;&#111;&#108;&#108;&#045;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#109;&#105;&#116;&#046;&#101;&#100;&#117;</a> and someone will get back to you within 1–2 business days.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">What type of licenses do these courses have?</div>
+                            <div class="accordion-content">
+                                <p>The courses here will have varying licenses, and you will see the license type indicated on the About Pages. Some courses will be All Rights Reserved, others Creative Commons, and some have mixed licenses.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">Who decides what content goes into each course?</div>
+                            <div class="accordion-content">
+                                <p>The MIT faculty member responsible for the course makes this decision on a case-by-case basis. This is why you may see different formats for each different course you access in the Open Learning Library. Most often, though, what you will see is the content and assessments that you need to work through in order to learn, while other assessments whose principal purpose is testing whether you have earned a certificate are only available on edX.org, where you can have the opportunity to earn a certificate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="socialmedia-area">
+                <ul class="socialmedia-list">
+                    <li class="socialmedia-list-item">
+                        <a class="twitter" href="https://twitter.com/mitopenlearning?lang=en" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="socialmedia-list-item">
+                        <a class="facebook" href="https://www.facebook.com/mitopenlearning/" target="_blank"><i class="fa fa-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+	<script type="text/javascript" src="/static/mitx/js/accordion.js"></script>
+</main>

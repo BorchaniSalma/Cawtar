@@ -1,0 +1,51 @@
+/* Navbar */
+
+.global-header{
+   
+    background-color: #fff !important;
+    padding: 2px !important;
+    box-shadow:0 0px 10px 0 rgba(0,0,0,0.1) !important;
+    -moz-box-shadow:0 5px 10px 0 rgba(0,0,0,0.1) !important;
+    -webkit-box-shadow:0 5px 10px 0 rgba(0,0,0,0.1) !important;
+
+}
+
+.global-header .nav-links .secondary a.sign-in-btn{
+    border-radius:0px !important;
+}
+
+.global-header .nav-links .secondary a.register-btn{
+    background-color:#F2B90F !important;
+    border-color:#F2B90F !important;
+    color:#005aab !important;
+    border-radius:0px !important;
+}
+.global-header .nav-links .secondary .nav-item.custom-nav li a {
+color: #005aab !important;
+}
+
+.global-header .nav-links .secondary .nav-item.custom-nav {
+    margin-right: 100px !important;
+}
+.global-header .header-logo a .logo {
+    height: 58px !important;
+    width: 92px !important;
+}
+.main-header {
+   
+    max-width: 90% !important;
+}
+.global-header .nav-links .secondary {
+   float: unset !important;
+   
+}
+
+.global-header .nav-links .main .nav-item.nav-tab .tab-nav-link {
+    border-width: 2px;
+    color: #005aab !important;
+    padding: 5px 0 10px 0;
+}
+
+.toggle-user-dropdown {
+    margin-left: 100px !important;
+}

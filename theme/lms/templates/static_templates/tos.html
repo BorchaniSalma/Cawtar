@@ -1,0 +1,53 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<style>p, ul{font-size: small;}</style>
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Terms of Service")}</h1>
+        <h2>${_("Welcome to e-learning cawtar !")}</h2>
+		<p>${_("Please read these Terms of Service (TOS) and the Privacy Policy and Honor Code  of e-learning cawtar Financial Education Platform prior to registering for, or using any portion of, the e-learning cawtar website (the Site, which consists of all content and pages located within e-learning cawtar web-domain), including accessing any course material, discussion rooms, or other electronic services.  ")}</p>
+		<p>${_("These TOS, the Privacy Policy and the Honor Code are agreements (the Agreements) between you and e-learning cawtar. By using the Site, you accept and agree to be legally bound by the Agreements, whether or not you are a registered user.")}</p>
+		<p>${_("e-learning cawtar reserves the right to modify these TOS at any time without advance notice. Any changes to these TOS will be effective immediately upon posting on this page, or on any portion of the Site. By accessing the Site after any changes have been made, you signify your agreement to the modified TOS and all of the changes. ")}</p>
+		<p>${_("Be sure to return to this page periodically to ensure familiarity with the most current version of these TOS.")}</p>
+		<h2>${_("Rules for online conduct")}</h2>
+		<p>${_("You agree that you are responsible for your own use of the Site and for your user postings. User Postings include all content submitted, posted, published or distributed on the Site by you or by other users of the Site, including, but not limited to, all forum posts, wiki edits, notes, questions, comments, videos and file uploads. ")}</p>
+		<p>${_("You agree that you will use the Site in compliance with the Agreements and with all applicable local, national and international laws, rules and regulations, including copyright laws, any laws regarding the transmission of technical data exported from your country of residence.")}</p>
+		<p>${_("As a condition of your use of the e-learning cawtar services, you hereby accept that you will not use the Site in any manner intended to damage, disable, overburden or impair any e-learning cawtar server or the network(s) connected to any e-learning cawtar server, or to interfere with any third party’s use and enjoyment of the Site. ")}</p>
+		<p>${_("You may not attempt to gain unauthorized access to the Site, other accounts, computer systems, or networks connected to any e-learning cawtar server through hacking, password mining or any other means. You may not obtain or attempt to obtain any materials or information stored on the Site, its servers or associated computers through any means not intentionally made available through the Site.")}</p>
+		<p>${_("The following list of items is strictly prohibited on the Site :")}</p>
+		<ul>
+			<li>${_("Content that defames, harasses or threatens others;")}</li>
+			<li>${_("Content that deals with illegal activities;")}</li>
+			<li>${_("Content that infringes a third party’s intellectual property, including, but not limited to, copyrights or trademarks;")}</li>
+			<li>${_("Profane, pornographic, obscene, indecent or unlawful content;")}</li>
+			<li>${_("Advertising or any form of commercial solicitation;")}</li>
+			<li>${_("Content related to partisan political activities;")}</li>
+			<li>${_("Viruses, trojan horses, worms, time bombs, corrupted files, malware, spyware or any other similar software that may damage the operation of another party’s computer or property; and")}</li>
+			<li>${_("Content that contains intentionally inaccurate information or that is posted with the intent of misleading others.")}</li>
+			
+		</ul>
+		<p>${_("Furthermore, you agree not to scrape, or otherwise download in bulk, any Site content, including, but not limited to, a list or directory of users on the system, online textbooks, user postings, or user information. You agree not to misrepresent or attempt to misrepresent your identity while using the Site.")}</p>
+		<p>${_("Any violation of the above list of prohibitions authorizes e-learning cawtar to terminate your use, access to, and/or participation in the Site without advance notice.")}</p>
+		<h2>${_("User accounts and authority")}</h2>
+		<p>${_("To fully participate in Site activities and services, you must provide your name, an email address, and a user password in order to create a user account (User Account). You agree that you will never divulge or share access, or access information, for your User Account with any third party for whatever reason. ")}</p>
+		<p>${_("In setting up your User Account, you may be prompted to enter additional optional information (e.g. gender, country, …). You affirm that all information provided by you is accurate and current. You agree to maintain and update your information to keep it accurate and current. ")}</p>
+		<p>${_("We care about the confidentiality and security of your personal information. Please see our Privacy Policy for more information about what information e-learning cawtar may collect about you and how e-learning cawtar uses that information. By accessing the Site, you signal your consent to the collection and use of your information by e-learning cawtar.")}</p>
+		<h2>${_("Your right to use the content on the Site")}</h2>
+		<p>${_("Unless otherwise indicated on the Site, texts, exams, videos, images, and other educational materials supplied with the courses offered on the Site are intended for your personal use only in those courses.")}</p>
+		<p>${_("Some reference documents, digital manuals, articles, and other information on the Site are used with the permission of third parties. The use of this information is subject to certain rules and conditions which will be displayed with the information. By using this Site, you agree to abide by all these rules and conditions.")}</p>
+		<h2>${_("Use")}</h2>
+		<p>${_("User Representations and Warranties: Notwithstanding the list of items that are strictly prohibited on the Site, as indicated above, by submitting or distributing your user submissions, you affirm, represent and warrant that you own and hold the rights, licenses, consents and/or permissions necessary to reproduce and post the user submissions on the Site, and authorize e-learning cawtar and its users to reproduce, modify, publish and otherwise use and distribute your user submissions in a manner consistent with the licenses granted by you under these TOS.    Neither your submission of your user submissions or the exercise of the licenses granted below shall infringe or violate the rights of any third party. You, and not e-learning cawtar, shall be solely responsible for your user submissions and the consequences of their posting on the Site.")}</p>
+		<h2>${_("Certificates")}</h2>
+		<p>${_("Institutions offering courses on the Site may issue a certificate of completion or any other appreciation (the Certificate) to the learners who are judged to have satisfactorily demonstrated mastery of the relevant material. The Certificates will be issued by e-learning cawtar under the name of the concerned institution from which the course originates. The decision as to whether a certificate will be granted to a learner who has completed the course will be solely at the discretion of the issuing institution. The e-learning cawtar financial education platform and/or the institutions which provide courses on the Site may, at their sole discretion, choose not to grant a Certificate for certain courses.")}</p>
+		<h2>${_("Other provisions")}</h2>
+		<p>${_("Termination rights : You agree that e-learning cawtar, in its sole discretion, may terminate your use of, or your participation in, the Site, for whatever reason or for no reason, after signing a notice. It is e-learning cawtar's policy to terminate, in the circumstances it deems appropriate, the participation of users who are copyright infringers. ")}</p>
+		<p>${_("e-learning cawtar and participants in the Platform reserve the right at any time, in their sole discretion, to cancel, delay, postpone, or change the format of any course offered by e-learning cawtar or to cease providing all, or part of, the content on the Site or related services. You also agree that neither e-learning cawtar nor any of the participants in the Platform shall have any liability to you for any such action. ")}</p>
+		<p>${_("If you no longer wish to participate in the Platform, you can terminate your participation at any time. The rights granted to you hereunder will cease upon termination of your right to use the Site, but the remaining provisions of these TOS will survive termination.")}</p>
+		<p>${_("Entire Agreement: The TOS, Honor Code and Privacy Policy shall constitute the entire agreement between you and e-learning cawtar and govern your use of the Site, superseding any prior agreement between you and e-learning cawtar regarding your use of the Site. ")}</p>
+		
+    </section>
+</main>

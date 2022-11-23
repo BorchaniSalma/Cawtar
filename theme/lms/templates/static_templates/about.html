@@ -1,0 +1,64 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<section class="page-hero-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col"><h1 style="display:none">${_("About")}</h1></div>
+        </div>
+    </div>
+</section>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about-block">
+        <div class="row">
+            <div class="about-content">
+               <!-- <p>${_("The Center of Arab Women for Training and Research (CAWTAR) was created in 1993, in response to the desire expressed by a number of Arab stakeholders, including local, regional and international institutions as well as governments, to establish a center of academic research and field studies relating to women s conditions.")}</p> -->
+                <!-- <p>${_("In addition to collecting data, indicators and statistics on women s economic, social and political conditions, CAWTAR significantly contributes to capacity building of stakeholders, enhancing networking, building strategic partnership and strengthening advocacy for women s rights.")}</p>
+                -->
+                <section id="faq-section">
+                    <h3 class="section-title">${_("Frequently Asked Questions")}</h3>
+                    <!--button id="btn_expand_faqs" class="btn btn-outline-primary">${_("Expand All")}</button>
+                    <button id="btn_minimise_faqs" class="btn btn-outline-primary">${_("Minimise All")}</button-->
+
+                    <div class="accordion">
+                           <div class="item">
+                            <div class="accordion-title">${_("How can I register on the platform?")}</div>
+                            <div class="accordion-content">
+                                <p>${_("Enter the platform via the following link:")} http://e-learning.cawtar.org/register</p>
+                                <p>${_("Enter all required information.")}</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="accordion-title">${_("Can I register for more than one training program at the same time?")}</div>
+                            <div class="accordion-content">
+                                <p>${_("Of course, you can enroll in more than one training program at the same time.")}</p>
+                            </div>
+                        </div>
+			<div class="item">
+                            <div class="accordion-title">${_("How do I determine that the training program is appropriate for my needs?")}</div>
+                            <div class="accordion-content">
+                                <p>${_("Choose the appropriate training programs based on: your academic specialization - the job you aspire to - your current job - your interests and after completing the training program think about how you can benefit from it in your job and your life in a practical and applicable way.")}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <div class="socialmedia-area">
+                <ul class="socialmedia-list">
+                    <li class="socialmedia-list-item">
+                        <a class="twitter" href="https://twitter.com/CAWTAR_ONG" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="socialmedia-list-item">
+                        <a class="facebook" href="https://www.facebook.com/CenterofArabWomenforTrainingandResearch" target="_blank"><i class="fa fa-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+<script type="text/javascript" src="/static/mitx/js/accordion.js"></script>
+</main>

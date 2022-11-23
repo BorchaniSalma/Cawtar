@@ -1,0 +1,643 @@
+<%page expression_filter="h"/>
+   <%inherit file="main.html" />
+      <%namespace name='static' file='static_content.html'/>
+         <%!
+            from django.utils.translation import ugettext as _
+            from django.urls import reverse
+            
+            from openedx.core.djangolib.markup import HTML, Text
+            %>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=swap">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="https://xpro.mit.edu/static/bundles/style-0dbfdfd595f616aaa1b4.css" rel="stylesheet">
+<title>MIT xPRO</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="https://xpro.mit.edu/static/css/vendor/jquery.fancybox.min.css" rel="stylesheet">
+
+<style type="text/css">
+   iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}
+</style>
+
+<style>
+   .header-block {
+   background-image: url('https://xpro.mit.edu/images/pgRR-5HU8upXxtbL2QucAeOYDoQ=/33/fill-768x576/xPRO_Homepage_Hero_Image.jpg?v=c42c76521f885cfc20778815be8b79ad07c0a0ad');
+   }
+   @media screen and (min-width: 768px) {
+   .header-block {
+   background-image: url('https://xpro.mit.edu/images/vQVu12EWhQHVewSaYOmVlKfb3UM=/33/fill-1920x1080/xPRO_Homepage_Hero_Image.jpg?v=c42c76521f885cfc20778815be8b79ad07c0a0ad');
+   }
+   .header-block {
+   background-image: none;
+   }
+   }
+</style>
+<div id="courseLineup" class="course-in-program">
+   <div class="container">
+      <div class="head">
+         <h1>UPCOMING COURSES AND PROGRAMS</h1>
+      </div>
+      <div class="course-slider slick-initialized slick-slider">
+         <button class="slick-prev slick-arrow" aria-label="Previous" type="button" aria-disabled="false" style="">Previous</button>
+         <div class="slick-list draggable">
+            <div class="slick-track" style="opacity: 1; width: 2280px; transform: translate3d(-1140px, 0px, 0px);">
+               <div class="slide slick-slide" data-url="http://xpro.mit.edu/courses/course-v1:xPRO+LASERxE1/" style="width: 380px;" tabindex="-1" data-slick-index="0" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/R0zBCZIiXm7fHuGVSN-_ILVCjj8=/282/fill-480x275/iStock-1206003926.jpg?v=b7394fe382111cd984a4a58732963ef2e3606abb" alt="System Thinking">
+                     <a class="title" href="/courses/course-v1:xPRO+LASERxE1/" tabindex="-1">System Thinking</a>
+                     <p>A five-week online course that will make you a better problem solver and improve the performance of your projects by teaching you to apply system thinking in technical environments.</p>
+                     <a href="/courses/course-v1:xPRO+LASERxE1/" class="detail-link text-uppercase" tabindex="-1">view detail</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide" data-url="http://xpro.mit.edu/courses/course-v1:xPRO+LASERxE2/" style="width: 380px;" tabindex="-1" data-slick-index="1" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/0IKxtqKQA7M__-xCLimBfk1qp9E=/239/fill-480x275/Leading_Technical_Innovation_Image.jpg?v=7f7977ccf5a5eeb1e91199d480125083399aeafd" alt="Technical Innovation: From Strategy to Application">
+                     <a class="title" href="/courses/course-v1:xPRO+LASERxE2/" tabindex="-1">Technical Innovation: From Strategy to Application</a>
+                     <p>A three-week online course that will teach you to spark and drive innovation, the modern way.</p>
+                     <a href="/courses/course-v1:xPRO+LASERxE2/" class="detail-link text-uppercase" tabindex="-1">view detail</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide" data-url="http://xpro.mit.edu/courses/course-v1:xPRO+MLx2/" style="width: 380px;" tabindex="-1" data-slick-index="2" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/HTf9ODEt8t0lG6aTu8PZuZ0BgKc=/261/fill-480x275/ML-course-2-LOW_New.jpg?v=b82f4f31ae6874204eb911e530a9aa53342cf499" alt="Applying Machine Learning to Engineering and Science">
+                     <a class="title" href="/courses/course-v1:xPRO+MLx2/" tabindex="-1">Applying Machine Learning to Engineering and Science</a>
+                     <p>Course 2 of 2 in the program Machine Learning, Modeling, and Simulation: Engineering Problem-Solving in the Age of AI</p>
+                     <a href="/courses/course-v1:xPRO+MLx2/" class="detail-link text-uppercase" tabindex="-1">view detail</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-current slick-active" data-url="http://xpro.mit.edu/courses/course-v1:xPRO+BioEngx/" style="width: 380px;" data-slick-index="3" aria-hidden="false">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/2wKEF7F6VwrSA6vgESfD_idU4ko=/262/fill-480x275/BioEngx_Course_New.jpg?v=9d6730e9993e2e1f39bc2a47f7ed92d59df97bb1" alt="Principles of Biomanufacturing: Using Biotechnology to Manufacture Medicines">
+                     <a class="title" href="/courses/course-v1:xPRO+BioEngx/" tabindex="0">Principles of Biomanufacturing: Using Biotechnology to Manufacture Medicines</a>
+                     <p>A six-week self-paced course for developing an integrated understanding of the creation of bio pharmaceuticals.</p>
+                     <a href="/courses/course-v1:xPRO+BioEngx/" class="detail-link text-uppercase" tabindex="0">view detail</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" data-url="http://xpro.mit.edu/courses/course-v1:xPRO+SysEngx2/" style="width: 380px;" data-slick-index="4" aria-hidden="false">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/JZXSIjRJetlHOSBd3juOrEiQr5E=/245/fill-480x275/SysEng_Course_2_Card_New.jpg?v=57d0ef561048c13288816348fce587bd3a0ec09b" alt="Models in Engineering">
+                     <a class="title" href="/courses/course-v1:xPRO+SysEngx2/" tabindex="0">Models in Engineering</a>
+                     <p>Course 2 of 4 in Architecture and Systems Engineering: Models and Methods to Manage Complex Systems</p>
+                     <a href="/courses/course-v1:xPRO+SysEngx2/" class="detail-link text-uppercase" tabindex="0">view detail</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" data-url="http://xpro.mit.edu/courses/course-v1:xPRO+QCFx2/" style="width: 380px;" data-slick-index="5" aria-hidden="false">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/Uu42oXAjHtS3yYU4T6Sjw7h-DIg=/249/fill-480x275/QC2_Program_card_New.jpg?v=a1a245205e2d4ef9c6c4ede22aabe728f79bf247" alt="Quantum Computing Algorithms for Cybersecurity, Chemistry, and Optimization">
+                     <a class="title" href="/courses/course-v1:xPRO+QCFx2/" tabindex="0">Quantum Computing Algorithms for Cybersecurity, Chemistry, and Optimization</a>
+                     <p>Course 2 of 2 in the Quantum Computing Fundamentals online program</p>
+                     <a href="/courses/course-v1:xPRO+QCFx2/" class="detail-link text-uppercase" tabindex="0">view detail</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button class="slick-next slick-arrow slick-disabled" aria-label="Next" type="button" style="" aria-disabled="true">Next</button>
+      </div>
+      <a href="/catalog/" class="btn btn-primary text-uppercase px-5">View All</a>
+   </div>
+</div>
+<div class="tv-block ">
+   <div class="container">
+      <h1>PROPEL YOUR CAREER ON YOUR TERMS</h1>
+      <div class="row">
+         <div class="col-lg-6 ">
+            <div class="rich-text">
+               <p>Technology is accelerating at an unprecedented pace causing disruption across all levels of business. Tomorrow’s leaders must demonstrate technical expertise as well as leadership acumen in order to maintain a technical edge over the competition while driving innovation in an ever-changing environment.</p>
+               <p>MIT uniquely understands this challenge and how to solve it with decades of experience developing technical professionals. MIT xPRO’s online learning programs leverage vetted content from world-renowned experts to make learning accessible anytime, anywhere. Designed using cutting-edge research in the neuroscience of learning, MIT xPRO programs are application focused, helping professionals build their skills on the job.</p>
+               <p>Embrace change. Enhance your skill set. Keep learning. MIT xPRO is with you each step of the way.</p>
+            </div>
+         </div>
+         <div class="col-lg-6">
+            <div class="video-holder">
+               <div class="tv-video youtube-video" id="tv-yt-video"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="270" src="https://www.youtube.com/embed/5CiCtj_2Qsg?feature=oembed&amp;rel=0&amp;enablejsapi=1" width="480"></iframe></div>
+               <div class="video-caption">
+                  <div class="rich-text"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="light-box-video-holder hidden">
+   <div class="tv-video youtube-video" id="tv-light-box-yt-video" data-href="<iframe allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;270&quot; src=&quot;https://www.youtube.com/embed/5CiCtj_2Qsg?feature=oembed&amp;rel=0&amp;enablejsapi=1&quot; width=&quot;480&quot;></iframe>"></div>
+   <div class="video-caption">
+      <div class="rich-text"></div>
+   </div>
+</div>
+<div id="learningTechniques" class="container learning-techniques-block section-spacing">
+   <h1>THE MIT xPRO LEARNING EXPERIENCE</h1>
+   <ul class="learning-techniques-list">
+      <li>
+         <div class="img-holder">
+            <img src="https://xpro.mit.edu/images/QB8l_rhh6VuPiOYjDNZcPfckGJE=/5/height-110%7Cformat-png/icon2.png?v=a0b21052effa3f2024b0c04f146b94a2189980bb" alt="Learning technique">
+         </div>
+         <h3>LEARN BY DOING</h3>
+         <h4>Practice processes and methods through simulations, assessments, case studies, and tools.</h4>
+      </li>
+      <li>
+         <div class="img-holder">
+            <img src="https://xpro.mit.edu/images/C86pMYfvSIE6loLvUrFhdP2AAiQ=/4/height-110%7Cformat-png/icon6.png?v=8d1710c434cd08b493a5c5b4ee2bc66fa7553fcb" alt="Learning technique">
+         </div>
+         <h3>LEARN FROM OTHERS</h3>
+         <h4>Connect with an international community of professionals while working on projects based on real-world examples.</h4>
+      </li>
+      <li>
+         <div class="img-holder">
+            <img src="https://xpro.mit.edu/images/NuVstpWZN9jxJyzHOBiK6Yd-5hY=/2/height-110%7Cformat-png/icon1.png?v=92b7c78cca2a068ca11daf4f70424d3c7ffaafdc" alt="Learning technique">
+         </div>
+         <h3>LEARN ON DEMAND</h3>
+         <h4>Access all of the content online and watch videos on the go.</h4>
+      </li>
+      <li>
+         <div class="img-holder">
+            <img src="https://xpro.mit.edu/images/LJaw7GesmmBZgpUaOeTbZDLlTik=/7/height-110%7Cformat-png/icon3.png?v=b733ccb43bcbefefd985a7a0e0597c7889d23f37" alt="Learning technique">
+         </div>
+         <h3>REFLECT AND APPLY</h3>
+         <h4>Bring your new skills to your organization, through examples from technical work environments and ample prompts for reflection.</h4>
+      </li>
+      <li>
+         <div class="img-holder">
+            <img src="https://xpro.mit.edu/images/HpvKneCMp0jSpUEDRYrRYMDnAIM=/3/height-110%7Cformat-png/icon5.png?v=f6dd939d98caf660ee55430d0cdebe1fe22bf3f1" alt="Learning technique">
+         </div>
+         <h3>DEMONSTRATE YOUR SUCCESS</h3>
+         <h4>Earn a Professional Certificate from MIT xPRO plus Continuing Education Units (CEUs).</h4>
+      </li>
+      <li>
+         <div class="img-holder">
+            <img src="https://xpro.mit.edu/images/X-HZMrMTpbR1USQJbgbHrdljw38=/6/height-110%7Cformat-png/icon4.png?v=d1e8248a4573359f05f5792f5e6c1cb49a0ed681" alt="Learning technique">
+         </div>
+         <h3>LEARN FROM THE BEST</h3>
+         <h4>Gain insights from MIT faculty and industry experts.</h4>
+      </li>
+   </ul>
+</div>
+<div id="testimonials" class="learners-block">
+   <div class="container">
+      <div class="head">
+         <h1>WHAT LEARNERS AND COMPANIES ARE SAYING</h1>
+         <h3>More than 15,000 professionals have completed an MIT xPRO course</h3>
+      </div>
+      <div class="learners-slider slick-initialized slick-slider slick-dotted">
+         <button class="slick-prev slick-arrow slick-disabled" aria-label="Previous" type="button" aria-disabled="true" style="">Previous</button>
+         <div class="slick-list draggable">
+            <div class="slick-track" style="opacity: 1; width: 3800px; transform: translate3d(0px, 0px, 0px);">
+               <div class="slide slick-slide slick-current slick-active" role="tabpanel" id="slick-slide00" style="width: 380px;" aria-describedby="slick-slide-control00" data-slick-index="0" aria-hidden="false">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/GdfD0mLuTtNM1mTj8KWsclWN-98=/34/fill-75x75/vivek_krishnamurthy.jpeg?v=853cbff2fc462bbae0ef4de182ab379c9c8464b4" alt="Vivek Krishnamurthy">
+                     <h2>Vivek Krishnamurthy, 3D Print Digital Production Business Development Rep, HP</h2>
+                     <p>Money well spent. The knowledge I gained was priceless.</p>
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" role="tabpanel" id="slick-slide01" style="width: 380px;" aria-describedby="slick-slide-control01" data-slick-index="1" aria-hidden="false">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/HVeR1YAXNZfIRwJzEtLITEuJ5wE=/163/fill-75x75/LPx_Emily_Wright.jpg?v=6f389f46bb2457dc1a28566d905125e498affea6" alt="Emily R. Wright">
+                     <h2>Emily R. Wright, Versatile Technologist</h2>
+                     <p>This is an awesome program for emerging leaders and for those currently in leadership positions. The knowledge, tools, and techniques are very useful…</p>
+                     <a data-toggle="modal" href="#testimonial-2" class="read-more" tabindex="0">Continue Reading</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" role="tabpanel" id="slick-slide02" style="width: 380px;" aria-describedby="slick-slide-control02" data-slick-index="2" aria-hidden="false">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/2EA5vlAaY26nKVm8rDFjFglmVT4=/37/fill-75x75/DSx_Thomas_Bonnier.jpg?v=ff1673404443bb820f22c02f6b6010b5f429059b" alt="Thomas Bonnier">
+                     <h2>Thomas Bonnier, Quantitative Risk Manager, Arval</h2>
+                     <p>[My knowledge gained in this course] will have a major impact as my job is really based on leveraging datasets, in order to make business recommendat…</p>
+                     <a data-toggle="modal" href="#testimonial-3" class="read-more" tabindex="0">Continue Reading</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide03" style="width: 380px;" aria-describedby="slick-slide-control03" data-slick-index="3" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/Olz3-YCl6r68lqhQ8ShoNlf-kNk=/25/fill-75x75/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" alt="Mike Vanderwel">
+                     <h2>Mike Vanderwel, Chief Engineer, Boeing</h2>
+                     <p>To me, accomplishment equates to job satisfaction. Upon completion of the course, learners will be able to develop additive applications and work col…</p>
+                     <a data-toggle="modal" href="#testimonial-4" class="read-more" tabindex="-1">Continue Reading</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide04" style="width: 380px;" aria-describedby="slick-slide-control04" data-slick-index="4" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/Olz3-YCl6r68lqhQ8ShoNlf-kNk=/25/fill-75x75/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" alt="Clayton Smith">
+                     <h2>Clayton Smith, Aerodynamicist, General Atomics</h2>
+                     <p>I had high expectations and they were adequately met! The content was just what I'd hoped.</p>
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide05" style="width: 380px;" aria-describedby="slick-slide-control05" data-slick-index="5" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/Olz3-YCl6r68lqhQ8ShoNlf-kNk=/25/fill-75x75/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" alt="Murali Thyagarajan">
+                     <h2>Murali Thyagarajan, DBA &amp; Application Support, NASDAQ</h2>
+                     <p>The course was easy to understand and had depth. All the concepts were clearly laid out and explained. This is the best course I have come across on …</p>
+                     <a data-toggle="modal" href="#testimonial-6" class="read-more" tabindex="-1">Continue Reading</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide06" style="width: 380px;" aria-describedby="slick-slide-control06" data-slick-index="6" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/Olz3-YCl6r68lqhQ8ShoNlf-kNk=/25/fill-75x75/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" alt="Michael Poliszuk">
+                     <h2>Michael Poliszuk, Lead Systems Engineer, Naval Air Systems Command</h2>
+                     <p>[My knowledge gained in this course] will be a great aid at solving problems.</p>
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide07" style="width: 380px;" aria-describedby="slick-slide-control07" data-slick-index="7" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/Olz3-YCl6r68lqhQ8ShoNlf-kNk=/25/fill-75x75/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" alt="Rejendra Polavarapu">
+                     <h2>Rejendra Polavarapu, Senior Consultant, Cognizant Tech Solutions</h2>
+                     <p>[I liked] learning how quantum computing can impact people and organizations behaviors toward computation and simulation of problems.</p>
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide08" style="width: 380px;" aria-describedby="slick-slide-control08" data-slick-index="8" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/0xp66E6CEmw5Hh7LnreI3dODcxc=/36/fill-75x75/DSx_Jasmine_Latham.jpg?v=a8cd60842a61346fecb699cd693121f46863049a" alt="Jasmine Latham">
+                     <h2>Jasmine Latham, Lead Data Scientist, Office for National Statistics</h2>
+                     <p>I am very pleased with the course content, it is exactly the level I am looking for. Each professor/course presenter has packed a lot of information …</p>
+                     <a data-toggle="modal" href="#testimonial-9" class="read-more" tabindex="-1">Continue Reading</a>
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide09" style="width: 380px;" aria-describedby="slick-slide-control09" data-slick-index="9" aria-hidden="true">
+                  <div class="slide-holder">
+                     <img src="https://xpro.mit.edu/images/Olz3-YCl6r68lqhQ8ShoNlf-kNk=/25/fill-75x75/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" alt="Pravin Kumarappan">
+                     <h2>Pravin Kumarappan, Platform Architect, Worldplay</h2>
+                     <p>This has helped me understand the prospects of quantum cybersecurity and optimization. I wish to take this knowledge back [to my company] and come aw…</p>
+                     <a data-toggle="modal" href="#testimonial-10" class="read-more" tabindex="-1">Continue Reading</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button class="slick-next slick-arrow" aria-label="Next" type="button" style="" aria-disabled="false">Next</button>
+         <ul class="slick-dots" style="" role="tablist">
+            <li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 4" tabindex="0" aria-selected="true">1</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 4" tabindex="-1">2</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 4" tabindex="-1">3</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control03" aria-controls="slick-slide03" aria-label="4 of 4" tabindex="-1">4</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control04" aria-controls="slick-slide04" aria-label="5 of 4" tabindex="-1">5</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control05" aria-controls="slick-slide05" aria-label="6 of 4" tabindex="-1">6</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control06" aria-controls="slick-slide06" aria-label="7 of 4" tabindex="-1">7</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control07" aria-controls="slick-slide07" aria-label="8 of 4" tabindex="-1">8</button></li>
+         </ul>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-1" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/DV4IcGEs1AuYuTTDuGerU2galtE=/34/fill-100x100/vivek_krishnamurthy.jpeg?v=853cbff2fc462bbae0ef4de182ab379c9c8464b4" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Vivek Krishnamurthy, 3D Print Digital Production Business Development Rep, HP</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>Money well spent. The knowledge I gained was priceless.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-2" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-2" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/8C0Bgye6KF-6jbGuluJ9iquXM0c=/163/fill-100x100/LPx_Emily_Wright.jpg?v=6f389f46bb2457dc1a28566d905125e498affea6" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Emily R. Wright, Versatile Technologist</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>This is an awesome program for emerging leaders and for those currently in leadership positions. The knowledge, tools, and techniques are very useful to companies worldwide. I would highly recommend this program to all levels of employees.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-3" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-3" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/BHP8aBwMd6WPc4rvy-3w2v-H14U=/37/fill-100x100/DSx_Thomas_Bonnier.jpg?v=ff1673404443bb820f22c02f6b6010b5f429059b" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Thomas Bonnier, Quantitative Risk Manager, Arval</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>[My knowledge gained in this course] will have a major impact as my job is really based on leveraging datasets, in order to make business recommendations.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-4" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-4" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/zWKsigWYtHDml0cVU6tFoKeTiyI=/25/fill-100x100/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Mike Vanderwel, Chief Engineer, Boeing</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>To me, accomplishment equates to job satisfaction. Upon completion of the course, learners will be able to develop additive applications and work collaboratively to solve problems, which will be deeply gratifying.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-5" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-5" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/zWKsigWYtHDml0cVU6tFoKeTiyI=/25/fill-100x100/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Clayton Smith, Aerodynamicist, General Atomics</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>I had high expectations and they were adequately met! The content was just what I'd hoped.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-6" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-6" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/zWKsigWYtHDml0cVU6tFoKeTiyI=/25/fill-100x100/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Murali Thyagarajan, DBA &amp; Application Support, NASDAQ</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>The course was easy to understand and had depth. All the concepts were clearly laid out and explained. This is the best course I have come across on this topic.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-7" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-7" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/zWKsigWYtHDml0cVU6tFoKeTiyI=/25/fill-100x100/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Michael Poliszuk, Lead Systems Engineer, Naval Air Systems Command</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>[My knowledge gained in this course] will be a great aid at solving problems.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-8" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-8" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/zWKsigWYtHDml0cVU6tFoKeTiyI=/25/fill-100x100/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Rejendra Polavarapu, Senior Consultant, Cognizant Tech Solutions</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>[I liked] learning how quantum computing can impact people and organizations behaviors toward computation and simulation of problems.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-9" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-9" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/tqzMI0nUDoYInt0ETWXRhJogUiA=/36/fill-100x100/DSx_Jasmine_Latham.jpg?v=a8cd60842a61346fecb699cd693121f46863049a" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Jasmine Latham, Lead Data Scientist, Office for National Statistics</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>I am very pleased with the course content, it is exactly the level I am looking for. Each professor/course presenter has packed a lot of information and has explained complex algorithms in good detail. Some with good sense of humor. Thank you very much.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="testimonial-10" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="container no-gutters px-0">
+                  <div class="d-flex flex-row-reverse">
+                     <a class="text-dark" href="testimonial-10" data-dismiss="modal"><span class="icon-close-outline" aria-hidden="true"></span></a>
+                  </div>
+               </div>
+               <div class="container px-4">
+                  <div class="row py-2">
+                     <img src="https://xpro.mit.edu/images/zWKsigWYtHDml0cVU6tFoKeTiyI=/25/fill-100x100/Anonymous_Learner_Profile_Avatar.png?v=5ecafd4ef35ed4a81ead80598d5bdc8325f1b097" class="border rounded-circle headshot-image" alt="Testimonial image">
+                  </div>
+                  <div class="row mb-4">
+                     <h2 class="modal-title text-uppercase">Pravin Kumarappan, Platform Architect, Worldplay</h2>
+                  </div>
+                  <div class="row quote-container">
+                     <p>This has helped me understand the prospects of quantum cybersecurity and optimization. I wish to take this knowledge back [to my company] and come away with a longer term strategy.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div id="forTeams" class="for-teams-block ">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-7 ">
+            <h1>THE BEST COMPANIES CONNECT WITH THE BEST MINDS AT MIT</h1>
+            <p>Deepen your team’s career knowledge and expand their abilities with MIT xPRO’s online courses for professionals. Develop customized learning for your team with bespoke courses and programs on your schedule. Set a standard of knowledge and skills, leading to effective communication among employees and consistency across the enterprise.</p>
+            <p>Find out what MIT xPRO can do for your team.</p>
+            <a href="https://learn-xpro.mit.edu/for-teams#b2bform" class="btn btn-primary text-uppercase px-5 py-2 action-button">Inquire Now</a>
+         </div>
+         <div class="col-lg-5">
+            <div class="img-holder ">
+               <img src="https://xpro.mit.edu/images/UBMmUDEXM0zR2C897Pbz1o4gwzY=/99/fill-750x505/B2B_xPRO_image.jpg?v=40275eb8623807bf237870d6c89dd348b893d99d" alt="B2B xPRO image.jpg">
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="companies-trust-block">
+   <div class="container">
+      <h1>HUNDREDS OF COMPANIES TRUST MIT xPRO, INCLUDING</h1>
+      <div class="logos-slider slick-initialized slick-slider slick-dotted">
+         <button class="slick-prev slick-arrow slick-disabled" aria-label="Previous" type="button" aria-disabled="true" style="display: inline-block;">Previous</button>
+         <div class="slick-list draggable">
+            <div class="slick-track" style="opacity: 1; width: 1850px; transform: translate3d(0px, 0px, 0px);">
+               <div class="slide slick-slide slick-current slick-active" role="tabpanel" id="slick-slide20" style="width: 185px;" aria-describedby="slick-slide-control20" data-slick-index="0" aria-hidden="false">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/lZJXz2yhpsXqUIugLZR4uXA0Weg=/38/format-png%7Cmax-185x185/BAE_Systems.png?v=46a18737b256661859e62d20e2b91c7c6e23992a" alt="BAE Systems.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" role="tabpanel" id="slick-slide21" style="width: 185px;" data-slick-index="1" aria-hidden="false">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/wMPOZkDs3G9nCFhYJ31DK4mShZE=/39/format-png%7Cmax-185x185/Boeing.png?v=ce27afcc3b2bae14846f0ac8be371c2624a53309" alt="Boeing.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" role="tabpanel" id="slick-slide22" style="width: 185px;" aria-describedby="slick-slide-control21" data-slick-index="2" aria-hidden="false">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/7ybvFQ4UEOlbdtfCurIalf4yyUA=/40/format-png%7Cmax-185x185/Ford.png?v=c078feb955105378281680cc49af33eb47d85f12" alt="Ford.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" role="tabpanel" id="slick-slide23" style="width: 185px;" aria-describedby="slick-slide-control21" data-slick-index="3" aria-hidden="false">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/4fzEAY9z3c76pyeoMvXnQmqCjx8=/42/format-png%7Cmax-185x185/Haliburton.png?v=a1fbec94a40b2b31717ad850a2839fb4e1e3f955" alt="Haliburton.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" role="tabpanel" id="slick-slide24" style="width: 185px;" aria-describedby="slick-slide-control22" data-slick-index="4" aria-hidden="false">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/eD3t39mb_pOSzMlZ80t6wbEkf9k=/43/format-png%7Cmax-185x185/IBM.png?v=c0e2a480e7ed9d0201c3569de451ecda560d1ba7" alt="IBM.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide slick-active" role="tabpanel" id="slick-slide25" style="width: 185px;" data-slick-index="5" aria-hidden="false">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/FcuhYeqjRAG5JAcM5VDTvZ0zC7Q=/44/format-png%7Cmax-185x185/Shell.png?v=aea13a8a6d308e546cf141995a5749e641e43029" alt="Shell.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide26" style="width: 185px;" aria-describedby="slick-slide-control22" data-slick-index="6" aria-hidden="true">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/ZpWjhshsBflVbtWjN_rA-kJjBmY=/45/format-png%7Cmax-185x185/US_Army.png?v=f2d6ade749c41730e35ef94eaccdacc1c3466569" alt="US Army.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide27" style="width: 185px;" data-slick-index="7" aria-hidden="true">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/hycl8y3YUPuz0axN6S5u_wea2uA=/41/format-png%7Cmax-185x185/GE.png?v=bb19e1576f93e8344485fdf352b4ad4a8b0e144e" alt="GE.png">
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide28" style="width: 185px;" aria-describedby="slick-slide-control24" data-slick-index="8" aria-hidden="true">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/V7uaUCud4lx0mqVtd07sL-YBfwk=/46/format-png%7Cmax-185x185/NAVAIR.jpg?v=e3e7826146ed81dec1b9405b14310430de582eb0" alt="NAVAIR.jpg">
+                  </div>
+               </div>
+               <div class="slide slick-slide" tabindex="-1" role="tabpanel" id="slick-slide29" style="width: 185px;" aria-describedby="slick-slide-control23" data-slick-index="9" aria-hidden="true">
+                  <div class="img-holder">
+                     <img src="https://xpro.mit.edu/images/-ocBr-zsxZTxzZbMcZ3IXhGH6E0=/47/format-png%7Cmax-185x185/Whirlpool.jpg?v=85d4af9ed749e032399946da77c0be88cf2996f6" alt="Whirlpool.jpg">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: inline-block;" aria-disabled="false">Next</button>
+         <ul class="slick-dots" style="" role="tablist">
+            <li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control20" aria-controls="slick-slide20" aria-label="1 of 2" tabindex="0" aria-selected="true">1</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control21" aria-controls="slick-slide23" aria-label="2 of 2" tabindex="-1">2</button></li>
+            <li role="presentation"><button type="button" role="tab" id="slick-slide-control22" aria-controls="slick-slide26" aria-label="3 of 2" tabindex="-1">3</button></li>
+         </ul>
+      </div>
+   </div>
+</div>
+<div class="posted-block">
+   <div class="container">
+      <h1>WANT TO LEARN ABOUT NEW COURSES FROM MIT xPRO?</h1>
+      <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+      <script data-hubspot-rendered="true">
+         if (typeof hbspt !== 'undefined') {
+             hbspt.forms.create({
+                 portalId: "4994459",
+                 formId: "ad5d54e5-5ca9-4255-9c17-fa222e0a9b82"
+             });
+         }
+      </script>
+   </div>
+</div>
+% if show_homepage_promo_video:
+  <section id="video-modal" class="modal home-page-video-modal video-modal">
+     <div class="inner-wrapper">
+        <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+     </div>
+  </section>
+% endif
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+</%block>
+% if show_signup_immediately is not UNDEFINED:
+ ## NOTE: This won't work in production, because anonymous views are cached, so it will
+ ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+   $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif

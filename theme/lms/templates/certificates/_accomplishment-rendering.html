@@ -1,0 +1,120 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+import datetime
+datetime.datetime.strptime("21/12/2008", "%d/%m/%Y")
+%>
+
+<main class="accomplishment accomplishment-main">
+
+    <div class="wrapper-accomplishment-rendering itsbg">
+        <div class="accomplishment-rendering itsbg" style="background-image: url('/static/images/cert-bg.jpeg'); background-size: contain; background-size: cover; background-repeat: no-repeat;">
+            <span class="deco-corner deco-corner-tl"></span>
+            <span class="deco-corner deco-corner-tr"></span>
+            <span class="deco-corner deco-corner-bl"></span>
+            <span class="deco-corner deco-corner-br"></span>
+
+            <div class="accomplishment-type its0"  style="margin-top: 150px; margin-bottom: 0px;">
+                <span class="accomplishment-type-symbol">
+                    <img class="src" src="/static/certificates/images/ico-${course_mode_class}.png" alt="Image for course mode of type ${course_mode_class}">
+                </span>
+
+                <span class="accomplishment-type-label hd-1 accomplishment-recipient hd-1 emphasized its1" style="font-size: 55px; line-height:45px; color: #be9660;">شهادة</span>
+            </div>
+
+            <div class="wrapper-statement-and-signatories">
+                <div class="accomplishment-statement its10" style="margin: 0px;width: 90%;padding-left: 0px;margin-left: 0px;left: -60px;position: relative;padding-bottom: 0px;">
+                    <p class="accomplishment-statement-lead">
+                        <span class="accomplishment-summary copy copy-lead its2" style="margin-bottom: 5px; font-size: 35px; margin-bottom: 0px;">أسندت لـ :</span>
+                        <strong class="accomplishment-recipient hd-1 emphasized its3" style="font-size: 50px; margin-bottom: 0px; line-height:45px; color: #be9660;">${accomplishment_copy_name}</strong>
+                        <span class="accomplishment-summary copy copy-lead its4" style="font-size: 35px; margin-bottom: 0px;">لمشاركته(ا) في الدورة التدريبية الإلكترونية في</span>
+
+                        <span class="accomplishment-course hd-1 emphasized">
+                            <span class="accomplishment-course-name its5" style="font-size: 50px; line-height:45px;">${accomplishment_copy_course_name}</span>
+                        </span>
+                    </p>
+
+                    <p class="accomplishment-statement-detail copy copy-lead its6" style="margin-bottom: 0px;">بتاريخ ${certificate_date_issued}</p>
+                </div>
+
+                % if mode != 'base':
+                <div class="accomplishment-signatories" style="margin: 0px; padding: 0px;">
+                    <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
+
+                    <div class="wrapper-signatories">
+                        <div class="list-signatories">
+                            % if certificate_data:
+                                % for signatory in certificate_data.get('signatories', []):
+                                    % if signatory.get('signature_image_path'):
+                                        <div class="signatory" style="width: calc(20% - 2rem);">
+                                            <img class="signatory-signature its7" style="display: inline; padding-top: 0px; padding-bottom: 0px;margin-bottom: 0px; height: 75px;" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+
+                                            <h4 class="signatory-name hd-5 its8">${signatory['name']}</h4>
+                                            <p class="signatory-credentials copy copy-micro its9">
+                                                <span class="role">${signatory['title']}</span>
+                                                <span class="organization">${signatory['organization']}</span>
+                                            </p>
+                                        </div>
+                                    % endif
+                                % endfor
+                            % endif
+                        </div>
+                    </div>
+                </div>
+                % endif
+            </div>
+
+            <div class="accomplishment-orgs" style="display:none">
+                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
+
+                <ul class="wrapper-orgs list-orgs">
+                    <li class="wrapper-organization">
+                        <div class="organization organization-edX">
+                            <img class="organization-logo" src="${logo_src}" alt="${platform_name}">
+                        </div>
+                    </li>
+
+                    % if organization_logo:
+                    <li class="wrapper-organization">
+                        <div class="organization">
+                            <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}">
+                        </div>
+                    </li>
+                    % endif
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper-accomplishment-metadata">
+        <div class="accomplishment-metadata">
+            <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about}</h2>
+
+            <div class="wrapper-metadata">
+                <dl class="metadata accomplishment-recipient">
+                    <dt class="label sr-only">${_("Awarded to:")}</dt>
+                    <dd class="value copy copy-meta">
+                        <span class="recipient-img">
+                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="Recipient Image">
+                        </span>
+                        <div class="recipient-details">
+                            <h3 class="recipient-name">${accomplishment_copy_name}</h3>
+                            <p class="recipient-username">${accomplishment_copy_username} @ ${platform_name}</p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="metadata accomplishment-id">
+                    <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
+                    <dd class="value copy copy-base">${certificate_id_number}</dd>
+                </dl>
+                <dl class="metadata accomplishment-date">
+                    <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+                    <dd class="value copy copy-base">${certificate_date_issued}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</main>

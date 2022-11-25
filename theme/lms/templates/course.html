@@ -6,20 +6,16 @@ from django.urls import reverse
 from six import text_type
 %>
 <%page args="course" expression_filter="h"/>
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/course-card.css">
 <article class="course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
   <a href="${reverse('about_course', args=[text_type(course.id)])}">
     <header class="course-image">
       <div class="cover-image">
         <img src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
-        <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
+        <div class="learn-more" aria-hidden="true">${_("Preview Course")}</div>
       </div>
     </header>
     <div class="course-info" aria-hidden="true">
-      <h2 class="course-name">
-        <span class="course-organization">${course.display_org_with_default}</span>
-        <!--span class="course-code">${course.display_number_with_default}</span-->
-        <span class="course-title" style="margin: 5px 0 5px 0;">${course.display_name_with_default}</span>
-      </h2>
       <%
       if course.start is not None:
           course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -35,6 +31,12 @@ from six import text_type
       % else:
           <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODES}" data-string="${_("Starts: {date}")}"></div>
       % endif
+      <h2 class="course-name">
+        <span class="course-organization">${course.display_org_with_default}</span>
+        <!--span class="course-code">${course.display_number_with_default}</span-->
+        <span class="course-title" style="margin: 5px 0 5px 0;">${course.display_name_with_default}</span>
+      </h2>
+  
     </div>
     <div class="sr">
       <ul>
@@ -48,6 +50,9 @@ from six import text_type
       </ul>
     </div>
   </a>
+  <div class="rate-enrol">
+    <a href="#" class="btn btn-primary enrol-button2">${_("Enrol ->")}</a>
+     </div>
 </article>
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
     DateUtilFactory.transform(iterationKey=".localized_datetime");

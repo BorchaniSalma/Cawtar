@@ -58,3 +58,8 @@ font-weight: 600;
     padding-left: 13px;
 
 }
+
+
+#main, .container, .course-tabs, body.view-in-course .container, body.view-in-course .content-wrapper, .wrapper-preview-menu .preview-menu, .content-wrapper .page-content-container {
+    max-width: 70% !important;
+}

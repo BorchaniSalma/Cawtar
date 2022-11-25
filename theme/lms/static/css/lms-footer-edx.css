@@ -429,7 +429,7 @@ footer#footer-edx-v3 .is-deprecated {
 }
 
 footer#footer-edx-v3 {
-	background: #e4e7fa;
+	background-color: f7f7f7 ;
 	padding: 15px 0;
 	border-top: 1px solid #e6e6e6;
 	-webkit-font-smoothing: antialiased;

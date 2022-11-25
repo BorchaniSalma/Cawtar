@@ -3,15 +3,14 @@
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("About")}</%block>
-
-<section class="page-hero-banner">
-    <div class="container">
-        <div class="row">
-            <div class="col"><h1 style="display:none">${_("About")}</h1></div>
-        </div>
-    </div>
-</section>
-
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/faq.css">
+<section class="page-hero-banner dashboard-page-banner-dashboard">
+    
+    <h3 class="dashboard-link">${_("Home/FAQ")}</h3>
+          <h1 class="dashboard-title">${_("FAQ")}</h1>
+  
+  </section>
+  
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="container about-block">
         <div class="row">
@@ -59,6 +58,11 @@
                 </ul>
             </div>
         </div>
+    </section>
+    <section class="contact-question">
+     <h1 class="question">You still have a question?</h1>
+     <h3 class="answer">if you cannot find answer to your question in our FAQ, you can Always contact us. We will answer to you shortly! </h3>
+    <div class="contact-button"> <a style="color: white;"href="/contactus" >Contact Us</a> </div>
     </section>
 <script type="text/javascript" src="/static/mitx/js/accordion.js"></script>
 </main>

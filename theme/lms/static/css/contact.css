@@ -5,38 +5,39 @@
 
 .page-hero-banner:before {
     background-color: #005aab !important;
-   
+
 }
 
 .page-hero-banner {
-     background-image: none !important;
+    background-image: none !important;
 }
 
-.contact-link{
-    margin-left:15% !important;
-    color:#F2B90F !important;
+.contact-link {
+    margin-left: 15% !important;
+    color: #F2B90F !important;
     padding-top: 1%;
 }
 
-.contact-title{
-    margin-left:15% !important;
-    color:white !important;
+.contact-title {
+    margin-left: 15% !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
-.contact-details{
+.contact-details {
     font-weight: bold;
     color: black;
     text-align: center;
 }
-.contact-message{
+
+.contact-message {
     text-align: center;
 }
 
-.contact-page-address{
+.contact-page-address {
     display: flex;
     justify-content: center;
-    height:20vh;
+    height: 20vh;
 }
 
 .contact-number {
@@ -45,7 +46,8 @@
     margin-top: 2%;
     display: flex;
     align-items: center;
-    flex-direction: column;}
+    flex-direction: column;
+}
 
 .contact-mail {
     background-color: #005aab;
@@ -58,16 +60,17 @@
     flex-direction: column;
 }
 
-.address-icon{
+.address-icon {
     fill: #F2B90F;
     text-align: center;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     padding-top: 36%;
 }
-.icon-container{
-width:20%;
-height:20%;
+
+.icon-container {
+    width: 20%;
+    height: 20%;
 }
 
 
@@ -80,7 +83,7 @@ height:20%;
     direction: ltr;
 }
 
-.second-address{
+.second-address {
     text-align: center;
     color: white;
 
@@ -89,14 +92,22 @@ height:20%;
 .contact-page-form {
     background-color: rgb(249 252 255);
     margin-top: 3%;
-    height: 70vh !important;
+    min-height: 70vh !important;
+    height: auto;
+}
+
+.contact-page-form form {
+    height: 70vh;
 }
 
 
 
 
 
-input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+input:focus~label,
+textarea:focus~label,
+input:valid~label,
+textarea:valid~label {
     font-size: 0.75em !important;
     color: #999 !important;
     top: -5px !important;
@@ -110,9 +121,10 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     margin: 1rem 14px !important;
     position: relative !important;
 }
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 768px) {
     .styled-input {
-        width:100%;
+        width: 100%;
     }
 }
 
@@ -127,12 +139,13 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     pointer-events: none !important;
 }
 
-.styled-input.wide { 
+.styled-input.wide {
     width: 650px !important;
     max-width: 100% !important;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 20px !important;
     width: 100% !important;
     font-size: 1rem !important;
@@ -142,10 +155,12 @@ input, textarea {
 
 
 input:focus,
-textarea:focus { outline: 0 !important;  }
+textarea:focus {
+    outline: 0 !important;
+}
 
-input:focus ~ span,
-textarea:focus ~ span {
+input:focus~span,
+textarea:focus~span {
     width: 100% !important;
     -webkit-transition: all 0.075s ease !important;
     transition: all 0.075s ease !important;
@@ -162,23 +177,28 @@ textarea {
     margin: 20px auto 25px auto !important;
 }
 
-.submit-btn {
+.submit-btn button {
+    background-image: unset;
     float: right !important;
     padding: 12px 33px !important;
-        display: inline-block !important;
-    background-color: #005aab  !important;
+    display: inline-block !important;
+    background-color: #005aab !important;
     color: white !important;
     font-size: 18px !important;
     cursor: pointer !important;
     box-shadow: 0 2px 5px 0 rgba(2, 1, 53, 0.06),
-              0 2px 10px 0 rgba(2, 1, 53, 0.06) !important;
+        0 2px 10px 0 rgba(2, 1, 53, 0.06) !important;
     -webkit-transition: all 300ms ease !important;
     transition: all 300ms ease !important;
+    border-radius: 0;
+    border: none;
+    text-shadow: none;
 }
 
-.submit-btn:hover {
+.submit-btn button:hover {
     transform: translateY(1px);
     box-shadow: 0 1px 1px 0 rgba(81, 81, 228, 0.1),
-              0 1px 1px 0 rgba(81, 81, 228, 0.1) !important;
+        0 1px 1px 0 rgba(81, 81, 228, 0.1) !important;
+    background-color: unset;
+    background-image: unset !important;
 }
-

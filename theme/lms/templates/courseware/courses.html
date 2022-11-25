@@ -30,9 +30,73 @@
 % endif
 
 <%block name="pagetitle">${_("Courses")}</%block>
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/courses.css">
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/course-card.css">
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/Instructor-card.css">
+
+
+<!-- <link rel="stylesheet" type="text/css" href="/static/mitx/css/homePage.css"> -->
+
+
+<section class="page-hero-banner contact-page-banner-contact">
+
+  <h3 class="contact-link">${_("Home/Courses")}</h3>
+        <h1 class="contact-title">${_("Courses")}</h1>
+
+</section>
+
+
+	<div class="training">
+	  <h3 class="title"> ${_("Training Sessions")}</h3>
+	  <h2 class="subtitle">${_("Trending courses")}</h2>
+	</div>
+
+
+		% for i in range(0,3) :
+		<div class="mySlides">
+			<div class="courses">
+				% for j in range (0,3) :
+				<div class="card">
+					<div class="img-mastercover">
+						<img src="https://archive.org/download/mx-player-icon/mx-player-icon.png" width="54px" alt="Play button" class="play-button">
+					  </div>
+					<!-- <img class="card-image" src="https://images.unsplash.com/photo-1534131707746-25d604851a1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"" class="card-img-top" alt="..."> -->
+					 <div class="course-details">
+						 <p class="course-date">${_("Started : May 1, 2022")}</p>
+						<h5 class="card-title">${_("Cawtar")}</h5>
+					<p class="card-text">${_("Initiation au montage de projet")}</p>
+					<div class="rate-enrol">
+						<a href="#" class="btn btn-primary enrol-button">${_("Enrol ->")}</a>
+					   </div>
+					 </div>
+				</div>
+				% endfor
+
+			</div>
+		</div>
+
+		% endfor
+
+
+
+
+
+	<div class="w3-center">
+	  <div class="w3-section">
+		<button class="w3-button w3-light-grey prev-button" onclick="plusDivs(-1)">❮</button>
+		<button class="w3-button w3-light-grey next-button" onclick="plusDivs(1)">❯</button>
+	  </div>
+	  <button class="w3-button demo" onclick="currentDiv(1)">1</button>
+	  <button class="w3-button demo" onclick="currentDiv(2)">2</button>
+	  <button class="w3-button demo" onclick="currentDiv(3)">3</button>
+	</div>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="find-courses">
+      <div class="training">
+        <h3 class="title"> ${_("Training Sessions")}</h3>
+        <h2 class="subtitle">${_("All courses")}</h2>
+        </div>
 	  <!--h3 class="section__title" style="margin-bottom: 1em;text-align: center;position: relative;text-transform: uppercase;font-size: 1.8em;margin: 0;padding: 0;font-weight: 500;line-height: 1.1;color: inherit;box-sizing: border-box;margin-block-start: 0.83em;margin-block-end: 0.83em;margin-inline-start: 0px;margin-inline-end: 0px;width: 100%;-webkit-tap-highlight-color: rgba(0,0,0,0);box-sizing: border-box;">${_("Please register in each unit to follow it")}</h3-->
       <section class="courses-container">
         % if course_discovery_enabled:
@@ -78,4 +142,126 @@
 
       </section>
     </section>
+    <section class="choose-us">
+      <h1 class="choose-us-title">${_('Why choose us')}</h1>
+      <h3 class="choose-us-description">${_('Learn with us and enjoy the various benefits')}</h3>
+<div class="choose-us-cards">
+<div class="first-card">
+  <img class="choose-us-card-image" src="/static/mitx/images/presentation.png"/>
+  <h3 class="first-title">${_('Learn From Experts')}</h3>
+  <h2 class="second-title">${_('Top experts around the world')}</h2>
+</div>
+<div class="second-card">
+  <img class="choose-us-card-image" src="/static/mitx/images/planet-earth.png"/>
+  <h3 class="first-title">${_('Go At Your Own Pace')}</h3>
+  <h2 class="second-title">${_('Enjoy Lifetime Access Courses')}</h2>
+</div>
+<div class="first-card third">
+  <img class="choose-us-card-image" src="/static/mitx/images/Layer.png"/>
+  <h3 class="first-title">${_('Lifetime Access')}</h3>
+  <h2 class="second-title">${_('Learn On Your Schedule')}</h2>
+</div>
+</div>
+    </section>
+<section class="instructors">
+	<div class="training">
+	  <h3 class="title"> ${_("Training Sessions")}</h3>
+	  <h2 class="subtitle">${_("Our Instructors")}</h2>
+	</div>
+  % for i in range(0,3) :
+  <div class="mySlide">
+    <div class="feedbacks">
+      % for i in range(0,3) :
+      <div class="feedback-card">
+         <div class="feedback-card-container">
+        <div class="user">
+          <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
+          <div class="user-info">
+            <h5>${_("Foulena Ben Foulen")}</h5>
+            <small>${_("Distance Learning Program Coordinator")}</small>
+            <div id="full-stars-example">
+            <div class="rating-group">
+              <label aria-label="1 star" class="rating__label" for="rating-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+              <label aria-label="2 stars" class="rating__label" for="rating-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+              <label aria-label="3 stars" class="rating__label" for="rating-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+              <label aria-label="4 stars" class="rating__label" for="rating-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+              <label aria-label="5 stars" class="rating__label" for="rating-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+          </div>
+          </div>
+          </div>
+          </div>
+      </div>
+      </div>
+      %endfor
+      </div>
+      </div>
+      %endfor
+          <div class="w3-center">
+          <div class="w4-section">
+            <button class="w3-button w3-light-grey prev-button" onclick="plus(-1)">❮</button>
+            <button class="w3-button w3-light-grey next-button" onclick="plus(1)">❯</button>
+          </div>
+          <button class="w3-button dem" onclick="current(1)">1</button> 
+          <button class="w3-button dem" onclick="current(2)">2</button> 
+          <button class="w3-button dem" onclick="current(3)">3</button> 
+          </div>
+</section>
 </main>
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " w3-red";
+	}
+	</script>
+  <script>
+		var slide = 1;
+		show(slide);
+		
+		function plus(n) {
+		  show(slide+= n);
+		}
+		
+		function current(n) {
+		  show(slide = n);
+		}
+		
+		function show(n) {
+		  var i;
+		  var y = document.getElementsByClassName("mySlide");
+		  var dots = document.getElementsByClassName("dem");
+		  if (n > y.length) {slide = 1}    
+		  if (n < 1) {slide= y.length}
+		  for (i = 0; i < y.length; i++) {
+			y[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" w3-red", "");
+		  }
+		  y[slide-1].style.display = "block";  
+		  dots[slide-1].className += " w3-red";
+		}
+		</script>
+	

@@ -64,7 +64,7 @@
     content:"";
     display:table
 }
-/* 
+/*
 .list-divided .item:last-child,ul .item:last-child,.list-bulleted .item:last-child,ol .item:last-child,.list-ordered .item:last-child,.list-inline .item:last-child,.list-grouped .item:last-child,.list .item:last-child,.list li:last-child,ol li:last-child,ul li:last-child,.list-divided:last-child,ul:last-child,.list-bulleted:last-child,ol:last-child,.list-ordered:last-child,.list-inline:last-child,.list-grouped:last-child,.list:last-child,.list-divided .item-complex:last-child,ul .item-complex:last-child,.list-bulleted .item-complex:last-child,ol .item-complex:last-child,.list-ordered .item-complex:last-child,.list-inline .item-complex:last-child,.list-grouped .item-complex:last-child,.list .item-complex:last-child{
     margin-bottom:0;
     padding-bottom:0;
@@ -4620,10 +4620,10 @@ body,.zebra-stripe>*:nth-child(odd),.depth-0{
     display:table
 }
 .header-global .wrapper-header .left{
-    float:left 
+    float:left
 }
 .header-global .wrapper-header .right{
-    float:right 
+    float:right
 }
 .header-global .wrapper-header .logo{
     float:left ;
@@ -5982,7 +5982,7 @@ body,.zebra-stripe>*:nth-child(odd),.depth-0{
     max-width:100%
 }
 .welcome-message .dismiss-message,.update-message .dismiss-message{
-    float:right 
+    float:right
 }
 .welcome-message .dismiss-message .btn-link,.update-message .dismiss-message .btn-link{
     color:#414141;
@@ -6028,7 +6028,7 @@ body,.zebra-stripe>*:nth-child(odd),.depth-0{
 }
 .course-sidebar .section-goals .current-goal-container .title{
     margin:4px 8px 0 0;
-    float:left 
+    float:left
 }
 .course-sidebar .section-goals .current-goal-container .title-label{
     display:none
@@ -6606,7 +6606,7 @@ body,.zebra-stripe>*:nth-child(odd),.depth-0{
         margin:20px 0 0 20px
     }
     .global-header .nav-links .main .nav-item{
-        float:left 
+        float:left
     }
     .global-header .nav-links .main .nav-tab{
         text-transform:none;
@@ -7336,7 +7336,7 @@ a:hover{
 }
 @media (min-width: 992px){
     .main-header>*:not(.hamburger-menu){
-        display:table-cell !important;
+        display:table-cell ;
         vertical-align:middle
     }
 }
@@ -7659,7 +7659,7 @@ a:hover{
 }
 @media (min-width: 768px){
     .wrapper-footer footer#footer-bottom .copyright{
-        float:right 
+        float:right
     }
 }
 .wrapper-footer footer#footer-openedx a,.wrapper-footer footer#footer-openedx .copyright,.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a{
@@ -8040,7 +8040,7 @@ input[type="submit"]:disabled,input[type="submit"].is-disabled,input[type="submi
     height:160px;
     overflow:hidden;
     width:160px;
-    float:left 
+    float:left
 }
 .instructors-list .instructors-list-item figure img{
     border-radius:50%;
@@ -8115,7 +8115,7 @@ input[type="submit"]:disabled,input[type="submit"].is-disabled,input[type="submi
     .course-info .course-sidebar{
         padding:0;
         width:360px;
-        float:right 
+        float:right
     }
 }
 .course-info .course-sidebar .important-dates .important-dates-item{
@@ -9206,7 +9206,7 @@ input:-webkit-autofill,input:-webkit-autofill:focus,textarea:-webkit-autofill,te
 }
 @media (min-width: 768px){
     .socialmedia-list{
-        float:right 
+        float:right
     }
 }
 .socialmedia-list .socialmedia-list-item{

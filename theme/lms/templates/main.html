@@ -98,7 +98,10 @@ from pipeline_mako import render_require_js_path_overrides
   % else:
     <%static:css group='${self.attr.main_css}'/>
   % endif
-
+  <%
+    maincss="css/main.css"
+  %>
+  <link rel="stylesheet" href="${static.url(maincss)}" type="text/css" media="all" />
   % if disable_courseware_js or uses_pattern_library:
     <%static:js group='base_vendor'/>
     <%static:js group='base_application'/>
@@ -174,11 +177,11 @@ from pipeline_mako import render_require_js_path_overrides
     }
     return "";
   }
-  
+
   function checkCookie() {
     var lang = getCookie("openedx-language-preference");
     if (lang != "") {
-      
+
     } else {
       footerLanguageSelector.langSelectionForceAr();
     }

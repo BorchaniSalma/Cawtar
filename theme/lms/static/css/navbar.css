@@ -1,41 +1,59 @@
 /* Navbar */
 
-.global-header{
-   
+.global-header {
+
     background-color: #fff !important;
     padding: 2px !important;
-    box-shadow:0 0px 10px 0 rgba(0,0,0,0.1) !important;
-    -moz-box-shadow:0 5px 10px 0 rgba(0,0,0,0.1) !important;
-    -webkit-box-shadow:0 5px 10px 0 rgba(0,0,0,0.1) !important;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1) !important;
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1) !important;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1) !important;
 
 }
 
-.global-header .nav-links .secondary a.sign-in-btn{
-    border-radius:0px !important;
+.global-header .nav-links .secondary a.sign-in-btn {
+    border-radius: 0px !important;
 }
 
-.global-header .nav-links .secondary a.register-btn{
-    background-color:#F2B90F !important;
-    border-color:#F2B90F !important;
-    color:#005aab !important;
-    border-radius:0px !important;
+.global-header .nav-links .secondary a.register-btn {
+    background-color: #F2B90F !important;
+    border-color: #F2B90F !important;
+    color: #005aab !important;
+    border-radius: 0px !important;
 }
+
 .global-header .nav-links .secondary .nav-item.custom-nav li a {
-color: #005aab !important;
+    color: #005aab !important;
+    font-size: calc(19px*0.8) !important
 }
 
 .global-header .nav-links .secondary .nav-item.custom-nav {
-    margin-right: 100px !important;
+    margin-right: 200px !important;
 }
+
 .global-header .header-logo a .logo {
     height: 58px !important;
     width: 92px !important;
 }
+
 .main-header {
-   
+    display: flex !important;
     max-width: 90% !important;
 }
+
+.main-header>*:not(.hamburger-menu){
+    display: unset !important;
+}
+
+.main-header .header-logo{
+    /* display: unset !important; */
+    min-width: unset !important;
+}
+
+.global-header .nav-links{
+    width: 100% !important;
+}
+
 .global-header .nav-links .secondary {
-   float: unset !important;
-   
+    float: unset !important;
+
 }

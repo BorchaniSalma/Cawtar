@@ -1,43 +1,50 @@
-  /* first-section */
-  .first-container {
-    /* background-image: url("https://media.istockphoto.com/photos/home-office-picture-id1254459991?k=20&m=1254459991&s=612x612&w=0&h=uFLLTin8umgZoh5QHRMI9ZLSrkITbfrKP7zqCLBwscg="); */
-    /* background-repeat: no-repeat; */
+   /* first-section */
+   .first-container {
+    background-image: url("/static/mitx/images/assets/banner.png");
+    background-repeat: no-repeat;
     width: 100vw !important;
-    background-color:#005aab !important;
-    /* background-size: cover; */
-    min-height: 50vh !important;
+    background-color: #005aab !important;
+    background-size: 100% 105%;
+    min-height: 79vh !important;
   }
-
   .content {
     position: absolute !important;
     color: white !important;
     width: 30vw !important;
-    padding: 1rem !important;
-    margin-left: 6rem !important;
-    margin-top: 5rem !important;
-}
-
-  .content h1 {
-    color: white !important;
-    width: 30vw !important;
-    font-size: 3em;
-    font-weight: bold;
-    text-align: left;
-}
-
-.btn {
+    padding: 1rem 12em !important;
+    margin-top: 4rem !important;
+    padding: 9em 12em !important;
+  }
+    .content h1 {
+      color: white !important;
+      width: 30vw !important;
+      font-size: 3em;
+      font-weight: bold;
+      text-align: left;
+  }
+  
+  .btn {
     background-color: #F2B90F;
     color: #005aab;
     border-radius: unset;
-    width: 38% !important;
+    width: calc(327px*0.8);
     text-transform: none !important;
-    margin-right: 12%;
-}
-.btn:hover {
-  color: #F2B90F !important;
-  background-color: #005aab !important;
-  background-image: unset !important;
-}
+    padding: 8% 1%;
+  }
+  .btn:hover {
+    color: #F2B90F !important;
+    background-color: #005aab !important;
+    background-image: unset !important;
+  }
+  
+  
+  
+
+
+
+
+
+
 
 
   /* panel */
@@ -55,7 +62,8 @@
   .panel .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 4%;
 }
 .panel .row .col {
     display: flex;
@@ -143,11 +151,10 @@
   background-color: rgb(249 252 255);
   justify-content: space-between;
   height: 60vh;
+  padding-right: 11rem;
 }
-
 .title {
     color: #005aab;
-    margin-right: 14%;
     margin-top: 7%;
     font-weight: 200;
     font-size: 19px;
@@ -155,41 +162,50 @@
 }
 .subtitle {
   font-weight: bold;
-  margin-right: 14%;
   width: 100%;
 }
 
 .about-content {
-  width: 42%;
-  margin-right: 14%;
+  width: 49%;
 }
 
 .about-list {
-  margin-right: 18%;
   font-weight: 600;
 }
 .about-list li {
 display: flex;
 }
 .about-image {
-  width: 74% !important;
+  width: 78% !important;
   margin-top: 19% !important;
+  margin-right: -24% !important;
 }
 
 
-
+.training {
+  padding-right:12rem;
+}
+.explore-button {
+  background-color: #005aab;
+  color: white;
+  text-align: center;
+  width: 8% !important;
+  margin-right: 72%;
+  margin-top: -9%;
+  padding: 1% 1%;
+}
 .courses {
   margin-bottom: 2%;
   display: flex;
   justify-content: center;
+  gap: 9%;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
   transition: 0.3s;
-  width: 16rem;
+  width: 19rem;
   height: 40vh;
-  margin-left: 3%;
   margin-top: 4%;
 }
 
@@ -240,7 +256,7 @@ display: flex;
   transition: 0.3s;
   width: 81%;
   top: 5%;
-  margin-left: 9%;
+  margin-right: 9%;
   margin-bottom: 9%;
 }
 .img-mastercover:hover {

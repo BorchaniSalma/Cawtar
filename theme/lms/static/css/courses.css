@@ -1,0 +1,121 @@
+.contact-page-banner-contact {
+    height: 12vh;
+    background-color: #005aab;
+}
+
+.page-hero-banner:before {
+    background-color: #005aab !important;
+
+}
+
+.page-hero-banner {
+     background-image: none !important;
+}
+
+.contact-link{
+    margin-left:15% !important;
+    color:#F2B90F !important;
+    padding-top: 1%;
+}
+
+.contact-title{
+    margin-left:15% !important;
+    color:white !important;
+    font-weight: bold !important;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 29px !important;
+  color: black !important;
+}
+
+.title {
+  color: #005aab;
+  margin-top: 0 !important;
+  font-weight: 200;
+  font-size: 19px;
+  padding-top: 0 !important;
+}
+.training{
+  padding: 1% 14%;
+
+}
+
+.find-courses .courses-container, .university-profile .courses-container {
+  padding: 0% 13% 0% 18%;
+  display: flex;
+  justify-content: center;
+}
+
+#main{
+    background-color: #F1F8FE;
+    max-width: unset !important;
+    /* padding: 25px 14%; */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+}
+
+.choose-us{
+  background-color: #005aab;
+}
+.choose-us-title {
+  color: white;
+  margin-bottom: 0.5%;
+  font-weight: 600;
+  padding-top: 2%;
+}
+.choose-us-description{
+  color: white;
+  text-align: center;
+}
+
+.choose-us-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-top: 2%;
+  padding-bottom: 3%;
+}
+.first-card {
+  background-color: #F1F8FE;
+  text-align: center;
+  height: fit-content;
+  padding: 2% 4%;
+}
+.second-card {
+  background-color: var(--unnamed-color-yellow);
+  text-align: center;
+  height: fit-content;
+  padding: 2.3% 4%;
+}
+.third {
+  padding: 2.5% 5%;
+}
+
+.first-title {
+  font-size: 22px;
+  font-weight: var(--unnamed-font-weight-600);
+  color: var(--unnamed-color-blue);
+  margin-bottom: 3%;
+}
+.second-title{
+  font-size: var(--unnamed-font-size-20);
+  color:var(--unnamed-color-blue);
+}
+
+.choose-us-card-image{
+  margin-bottom: 16%;
+}
+.find-courses .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item, .university-profile .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item {
+  float: left;
+  display: block;
+  margin-right: 3% !important;
+  width: 30% !important;
+  margin-bottom: 12% !important;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+background-color: white;
+border: unset;
+}

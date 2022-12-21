@@ -7278,7 +7278,7 @@ a:hover{
 .global-header .nav-links .secondary .nav-item:last-child{
     margin-right:-1px;
     margin-left:5px;
-    width: 30px!important;
+    width: 30px;
 }
 .global-header .nav-links .secondary a.sign-in-btn,.global-header .nav-links .secondary a.register-btn{
     font-size:14px;
@@ -8240,7 +8240,8 @@ input[type="submit"]:disabled,input[type="submit"].is-disabled,input[type="submi
     color:#2c618b;
     font-size:14px;
     position:relative;
-    z-index:10
+    z-index:10;
+    margin-bottom: 7%;
 }
 .course-view .course-outline #expand-collapse-outline-all-button:hover{
     background:#2c618b;

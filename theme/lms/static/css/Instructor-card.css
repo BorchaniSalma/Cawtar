@@ -1,22 +1,23 @@
 
 .feedback-card {
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-    transition: 0.3s;
-    width: 25rem;
-    /* height: 23vh; */
-    margin-left: 2%;
-    /* margin-top: 4%; */
-    display: flex;
-    margin-bottom: 1%;
-    height: fit-content;
-    padding: 2% 1%;
-    background-color: white;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+  width: 455px;
+  /* height: 23vh; */
+  margin-left: 2%;
+  /* margin-top: 4%; */
+  display: flex;
+  margin-bottom: 1%;
+  /* height: fit-content; */
+  padding: 2% 1%;
+  background-color: white;
+  min-height: 131px;
 }
   .user {
     display: flex;
     margin-top: 2%;
   }
-  
+
   .user img {
     border-radius: 50%;
     width: 58px;
@@ -35,7 +36,8 @@
   .feedbacks{
     display:flex;
     justify-content: center;
-  
+    margin-top: 40px
+
   }
   .dem{
       display: none;
@@ -81,59 +83,59 @@
   .rating2 a {
     float:none
   }
- 
-  
+
+
     .rating-group {
       display: inline-flex;
     }
-    
+
     .rating__icon {
       pointer-events: none;
     }
-    
+
     .rating__input {
      position: absolute !important;
      left: -9999px !important;
     }
-  
+
     .rating__label {
       cursor: pointer;
       padding: 0 0.1em;
       font-size: 1rem;
   }
-    
+
     .rating__icon--star {
       color: orange;
     }
-    
+
     .rating__icon--none {
       color: #eee;
     }
-  
+
     .rating__input--none:checked + .rating__label .rating__icon--none {
       color: red;
     }
-  
+
     .rating__input:checked ~ .rating__label .rating__icon--star {
       color: #ddd;
     }
-  
+
     .rating-group:hover .rating__label .rating__icon--star {
       color: orange;
     }
-  
+
     .rating__input:hover ~ .rating__label .rating__icon--star {
       color: #ddd;
     }
-    
+
     .rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
        color: #eee;
     }
-  
+
     .rating__input--none:hover + .rating__label .rating__icon--none {
       color: red;
     }
-  
+
     .check-list {
       width: 1.5%;
       color: #005aab;
@@ -143,5 +145,13 @@
       margin-top: 0.5%;
       margin-right: 1%;
   }
-  
-  
+
+  @media (max-width: 1200px) {
+    .feedback-card {
+      /* width: 302px; */
+      /* min-height: 200px; */
+      /* max-height: 150px; */
+      width: 302px;
+      height: 138px;
+  }
+  }

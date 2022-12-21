@@ -3,6 +3,9 @@
   import json
   from django.utils.translation import ugettext as _
   from openedx.core.djangolib.js_utils import js_escaped_string, dump_js_escaped_json
+
+  from django.utils.translation import get_language_bidi
+  size = "14" if get_language_bidi() else "12"
 %>
 <%inherit file="../main.html" />
 <%
@@ -30,12 +33,25 @@
 % endif
 
 <%block name="pagetitle">${_("Courses")}</%block>
-<link rel="stylesheet" type="text/css" href="/static/mitx/css/courses.css">
-<link rel="stylesheet" type="text/css" href="/static/mitx/css/course-card.css">
-<link rel="stylesheet" type="text/css" href="/static/mitx/css/Instructor-card.css">
+
 
 
 <!-- <link rel="stylesheet" type="text/css" href="/static/mitx/css/homePage.css"> -->
+
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/cards-mobile.css">
+<link rel="stylesheet" href="/static/mitx/css/Flickity.css" media="screen">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+% if get_language_bidi():
+<%
+rtl_css_file = self.attr.main_css.replace('.css', '-rtl.css')
+%>
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/courses-rtl.css">
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/course-card-rtl.css">
+% else:
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/courses.css">
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/course-card.css">
+% endif
+
 
 
 <section class="page-hero-banner contact-page-banner-contact">
@@ -46,59 +62,89 @@
 </section>
 
 
-	<div class="training">
+
+	<div class="training1">
 	  <h3 class="title"> ${_("Training Sessions")}</h3>
 	  <h2 class="subtitle">${_("Trending courses")}</h2>
 	</div>
 
+	<div class="mySlides">
 
-		% for i in range(0,3) :
-		<div class="mySlides">
-			<div class="courses">
-				% for j in range (0,3) :
-				<div class="card">
-					<div class="img-mastercover">
-						<img src="https://archive.org/download/mx-player-icon/mx-player-icon.png" width="54px" alt="Play button" class="play-button">
-					  </div>
-					<!-- <img class="card-image" src="https://images.unsplash.com/photo-1534131707746-25d604851a1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"" class="card-img-top" alt="..."> -->
-					 <div class="course-details">
-						 <p class="course-date">${_("Started : May 1, 2022")}</p>
-						<h5 class="card-title">${_("Cawtar")}</h5>
-					<p class="card-text">${_("Initiation au montage de projet")}</p>
-					<div class="rate-enrol">
-						<a href="#" class="btn btn-primary enrol-button">${_("Enrol ->")}</a>
-					   </div>
-					 </div>
-				</div>
-				% endfor
-
-			</div>
-		</div>
-
-		% endfor
+    <div class="courses">
+      <section class="find-courses">
+        <section class="courses-container">
+          <div class="courses no-course-discovery" role="region" aria-label="${_('List of Courses')}">
+            <ul class="courses-listing courses-list">
+            %for item in courses[:3]:
+            <li class="courses-listing-item">
+              <%include file="../course.html" args="course=item['course'],registered=item['registred'],show_courseware_link=item['show_courseware_link'],course_target=item['course_target']" />
+            </li>
+            %endfor
+            </ul>
+          </div>
+        </section>
+      </section>
+      </div>
+      </div>
 
 
+      <div class="mySlides">
+
+        <div class="courses">
+          <section class="find-courses">
+            <section class="courses-container">
+              <div class="courses no-course-discovery" role="region" aria-label="${_('List of Courses')}">
+                <ul class="courses-listing courses-list">
+                %for item in courses[3:]:
+                <li class="courses-listing-item">
+                  <%include file="../course.html" args="course=item['course'],registered=item['registred'],show_courseware_link=item['show_courseware_link'],course_target=item['course_target']" />
+                </li>
+                %endfor
+                </ul>
+              </div>
+            </section>
+          </section>
+          </div>
+          </div>
 
 
+<div class="w3-center">
+  <div class="w3-section">
+  <button class="w3-button w3-light-grey prev-button" onclick="plusDivs(-1)">❮</button>
+  <button class="w3-button w3-light-grey next-button" onclick="plusDivs(1)">❯</button>
+  </div>
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button>
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button>
 
-	<div class="w3-center">
-	  <div class="w3-section">
-		<button class="w3-button w3-light-grey prev-button" onclick="plusDivs(-1)">❮</button>
-		<button class="w3-button w3-light-grey next-button" onclick="plusDivs(1)">❯</button>
-	  </div>
-	  <button class="w3-button demo" onclick="currentDiv(1)">1</button>
-	  <button class="w3-button demo" onclick="currentDiv(2)">2</button>
-	  <button class="w3-button demo" onclick="currentDiv(3)">3</button>
-	</div>
+</div>
+<section class="courses-container mobile">
+  <div class="courses">
+    <section class="find-courses">
+      <section class="courses-container">
+        <div class="courses no-course-discovery" role="region" aria-label="${_('List of Courses')}">
+          <ul class="courses-listing courses-list">
+          %for item in courses:
+          <li class="courses-listing-item">
+            <%include file="../course.html" args="course=item['course'],registered=item['registred'],show_courseware_link=item['show_courseware_link'],course_target=item['course_target']" />
+          </li>
+          %endfor
+          </ul>
+        </div>
+      </section>
+    </section>
+    </div>
+</section>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="find-courses">
-      <div class="training">
-        <h3 class="title"> ${_("Training Sessions")}</h3>
-        <h2 class="subtitle">${_("All courses")}</h2>
-        </div>
+
 	  <!--h3 class="section__title" style="margin-bottom: 1em;text-align: center;position: relative;text-transform: uppercase;font-size: 1.8em;margin: 0;padding: 0;font-weight: 500;line-height: 1.1;color: inherit;box-sizing: border-box;margin-block-start: 0.83em;margin-block-end: 0.83em;margin-inline-start: 0px;margin-inline-end: 0px;width: 100%;-webkit-tap-highlight-color: rgba(0,0,0,0);box-sizing: border-box;">${_("Please register in each unit to follow it")}</h3-->
       <section class="courses-container">
+        <div class="training">
+          <h3 class="title"> ${_("Training Sessions")}</h3>
+          <h2 class="subtitle">${_("All courses")}</h2>
+          </div>
         % if course_discovery_enabled:
         <div id="discovery-form" role="search" aria-label="course" class="wrapper-search-context">
           <div id="discovery-message" class="search-status-label"></div>
@@ -123,9 +169,9 @@
 
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
           <ul class="courses-listing courses-list">
-            %for course in courses:
+            %for item in courses:
             <li class="courses-listing-item">
-              <%include file="../course.html" args="course=course" />
+              <%include file="../course.html" args="course=item['course'],registered=item['registred'],show_courseware_link=item['show_courseware_link'],course_target=item['course_target']" />
             </li>
             %endfor
           </ul>
@@ -164,10 +210,12 @@
 </div>
     </section>
 <section class="instructors">
-	<div class="training">
-	  <h3 class="title"> ${_("Training Sessions")}</h3>
-	  <h2 class="subtitle">${_("Our Instructors")}</h2>
-	</div>
+  <div class="title-container">
+    <div class="training">
+      <h3 class="title"> ${_("Training Sessions")}</h3>
+      <h2 class="subtitle">${_("Our Instructors")}</h2>
+    </div>
+  </div>
   % for i in range(0,3) :
   <div class="mySlide">
     <div class="feedbacks">
@@ -179,15 +227,6 @@
           <div class="user-info">
             <h5>${_("Foulena Ben Foulen")}</h5>
             <small>${_("Distance Learning Program Coordinator")}</small>
-            <div id="full-stars-example">
-            <div class="rating-group">
-              <label aria-label="1 star" class="rating__label" for="rating-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-              <label aria-label="2 stars" class="rating__label" for="rating-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-              <label aria-label="3 stars" class="rating__label" for="rating-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-              <label aria-label="4 stars" class="rating__label" for="rating-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-              <label aria-label="5 stars" class="rating__label" for="rating-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-          </div>
-          </div>
           </div>
           </div>
       </div>
@@ -201,10 +240,30 @@
             <button class="w3-button w3-light-grey prev-button" onclick="plus(-1)">❮</button>
             <button class="w3-button w3-light-grey next-button" onclick="plus(1)">❯</button>
           </div>
-          <button class="w3-button dem" onclick="current(1)">1</button> 
-          <button class="w3-button dem" onclick="current(2)">2</button> 
-          <button class="w3-button dem" onclick="current(3)">3</button> 
+          <button class="w3-button dem" onclick="current(1)">1</button>
+          <button class="w3-button dem" onclick="current(2)">2</button>
+          <button class="w3-button dem" onclick="current(3)">3</button>
           </div>
+          	
+          <div class="feedbacks mobile">
+            <div class="carousel" data-flickity='{ "wrapAround": true }'>
+              %for i in range(0,3):
+            <div class="carousel-cell">
+            <div class="feedback-card">
+              <div class="card-container">
+               <div class="user">
+                 <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
+                 <div class="user-info">
+                   <h5>${_("Foulena Ben Foulen")}</h5>
+                   <small>${_("Distance Learning Program Coordinator")}</small>
+                  </div>
+                 </div>
+             </div>
+             </div>  </div>
+            %endfor
+              </div>
+            </div>
+            
 </section>
 </main>
 
@@ -239,29 +298,29 @@
   <script>
 		var slide = 1;
 		show(slide);
-		
+
 		function plus(n) {
 		  show(slide+= n);
 		}
-		
+
 		function current(n) {
 		  show(slide = n);
 		}
-		
+
 		function show(n) {
 		  var i;
 		  var y = document.getElementsByClassName("mySlide");
 		  var dots = document.getElementsByClassName("dem");
-		  if (n > y.length) {slide = 1}    
+		  if (n > y.length) {slide = 1}
 		  if (n < 1) {slide= y.length}
 		  for (i = 0; i < y.length; i++) {
-			y[i].style.display = "none";  
+			y[i].style.display = "none";
 		  }
 		  for (i = 0; i < dots.length; i++) {
 			dots[i].className = dots[i].className.replace(" w3-red", "");
 		  }
-		  y[slide-1].style.display = "block";  
+		  y[slide-1].style.display = "block";
 		  dots[slide-1].className += " w3-red";
 		}
 		</script>
-	
+

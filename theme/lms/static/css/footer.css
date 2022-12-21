@@ -1,0 +1,133 @@
+footer#footer-edx-v3 a:not(.btn), footer#footer-edx-v3 a:visited:not(.btn) {
+    color: #838485 !important;
+  
+}
+
+footer#footer-edx-v3 h2.heading {
+    color: var(--unnamed-color-border-blue) !important;
+    font-weight: 400 !important;
+}
+
+footer#footer-edx-v3 {
+    border-top: 2px solid var(--unnamed-color-blue) !important;
+}
+
+
+footer#footer-edx-v3 p {
+    color: grey !important;
+}
+
+.footer-flex {
+    display: flex;
+    padding: 0 14em;
+}
+.footer-links {
+    display: flex;
+    gap: 9%;
+    width: 100%;
+}
+.footer-list {
+    width: 167px;
+}
+.list-footer{
+list-style-type:none;
+
+}
+footer#footer-edx-v3 ul.clear-margins {
+    margin-top: 15px;
+    width: 150px;
+    border-bottom: none;
+}
+.image-logo{
+    width: 150px;
+}
+.first-list{
+display: flex;
+}
+.second-list{
+display: flex;
+}
+
+
+
+
+@media (max-width: 767px){
+    .footer-flex {
+        padding: 12px 45px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-links {
+        gap: 29%;
+    }
+    .footer-list {
+        width: 90px;
+    }
+    footer#footer-edx-v3 ul.clear-margins {
+        width: 47px;
+     
+    }
+    footer#footer-edx-v3 .footer-logo, footer#footer-edx-v3 .site-details, footer#footer-edx-v3 .external-links {
+        width: 32% !important;
+    }
+    footer#footer-edx-v3 ul.clear-margins {
+      
+        border-bottom: none !important;
+     
+    }
+    .first-list{
+        display: block;
+        }
+        .second-list{
+        display: block;
+        }
+    
+}
+  
+@media (min-width: 768px) and (max-width: 1024px){
+    .footer-flex {
+        flex-direction: column;
+    }
+    .footer-links {
+        gap: 45%;
+    }
+    .footer-list {
+        width: 90px;
+    }
+    footer#footer-edx-v3 ul.clear-margins {
+        width: 47px;
+     
+    }
+    footer#footer-edx-v3 .footer-logo, footer#footer-edx-v3 .site-details, footer#footer-edx-v3 .external-links {
+        width: 32% !important;
+    }
+    footer#footer-edx-v3 ul.clear-margins {
+      
+        border-bottom: none !important;
+     
+    }
+    .first-list{
+        display: block;
+        }
+        .second-list{
+        display: block;
+        }
+        .footer-flex {
+            display: flex;
+            padding: 0px 10em;
+        }
+    }
+
+    @media (min-width: 1025px) and (max-width: 1100px){
+        .footer-flex {
+            display: flex;
+            padding: 0 6em;
+        }
+        }
+
+        @media  (max-width: 300px){
+            .footer-flex {
+                padding: 12px 9px;
+             
+            }            
+        }

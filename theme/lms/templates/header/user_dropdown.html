@@ -20,10 +20,18 @@ resume_block = retrieve_last_sitewide_block_completed(self.real_user)
 displayname = self.real_user.profile.name
 %>
 
+<div class="mobile-nav-item hidden-mobile nav-item nav-tab my-courses-btn">
+    <div>
+        <a class="${'active ' if reverse('dashboard') == request.path else ''}  tab-nav-link" href="${reverse('dashboard')}"
+        aria-current="${'page' if reverse('dashboard') == request.path else 'false'}">
+        ${_("My Courses")}
+    </div>
+    </a>
+  </div>
 <div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
 	<div class="toggle-user-dropdown" role="button" aria-label=${_("Options Menu")} aria-expanded="false" tabindex="0" aria-controls="user-menu" style="display: inline-flex; overflow: hidden; max-width: 200px;">
-        <span class="sr-only">${_("Dashboard for:")}</span>
-        <span class="username">${displayname}</span>
+        <!-- <span class="sr-only">${_("Dashboard for:")}</span>
+        <span class="username">${displayname}</span> -->
         <span class="user-image-frame" style="margin-left: 10px; margin-right: 10px; width: 30px;">
             <img src="${profile_image_url}"/>
         </span>

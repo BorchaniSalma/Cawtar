@@ -1,11 +1,12 @@
 .dashboard-page-banner-dashboard {
     height: 12vh;
     background-color: #005aab;
+    background-image: url("/static/mitx/images/assets/icons/Path 78202.png");
 }
 
 .page-hero-banner:before {
     background-color: #005aab !important;
-   
+
 }
 
 .page-hero-banner {
@@ -18,11 +19,10 @@
     color:#F2B90F !important;
     padding-top: 1%;
 }
-
-.dashboard-title{
-    margin-left:15% !important;
-    color:white !important;
-    font-weight: bold !important;
+.dashboard-title {
+    margin-left: 15% !important;
+    color: white !important;
+    font-weight: 500 !important;
 }
 .page-hero-banner .container {
     padding-top: 0;
@@ -30,19 +30,20 @@
     display: none;
 }
 
-.panel-container{
-    height:9vh; 
+.container-panel{
+    height:fit-content;
+    background-color: rgb(238 243 251);
+    align-items: center;
  }
  .panel {
-    background-color: rgb(238 243 251);
+    width: 100%;
     color: #005aab;
-    height: 100%;
 }
 .panel .row {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 6%;
+    gap: 4%;
 }
 .panel .row .col {
     display: flex;
@@ -51,35 +52,68 @@
     width: 16%;
     gap: 6px;
 }
-.first {
-    border-right: 1px solid !important;
+.items {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+.item {
+    display: flex;
+    margin-top: 0.7%;
+    gap: 2%;
+    padding: 12px 0px;
+}
+.item-first{
+    display: flex;
+    margin-top: 0.7%;
+
+}
+.item-second {
+    display: flex;
+    gap: 76px;
+}
+.item-first {
+    border-right: 2px solid #005aab !important;
     display: flex !important;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    height: 59px;
+    padding-right: 2%;
+}
+.col.first h3{
+    margin-left: 0 !important;
 }
 .panel-number {
     font-size: 3em;
     font-weight: 600;
     color: #F2B90F;
 }
-.panel-description {
-    width: 36% !important;
-    font-size: 1em;
-    margin-top: 4%;
-    margin-left: 7%;
-    color: #005aab;
+.item-first .panel-description {
+    font-size: 25px !important;
 }
-.first .panel-description {
-    font-size: 13px;
+.panel-description {
+    /* width: 100% !important; */
+    font-size: 1em;
+    margin-left: 0%;
+    color: #005aab;
+    font-size: 15px !important;
+    text-align: center;
+    padding-top: 3%;
 }
 .user {
-    margin-left: -27px;
+
     font-size: 1.2em;
+    color: #005aab;
+
 }
-.icon-panel{
+.panel-informations {
+    display: flex;
+    gap: 1px;
+}
+/* .icon-panel{
     width: 20%;
     fill:#005aab
-}
+} */
 
 .dashboard .main-container {
     width: 100%;
@@ -106,9 +140,11 @@
     box-shadow: unset;
     color: black;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1.2em;
+    border-bottom: 2px solid transparent;
+    text-shadow: unset;
+    transition: all 0.3s;
 }
-
 .course-link:hover {
     border: unset;
     background-color: unset !important;
@@ -116,7 +152,6 @@
     box-shadow: unset;
     color: var(--unnamed-color-blue);
     font-weight: 600;
-    font-size: 1em;
     border-bottom: 2px solid;
     border-radius: unset;
 }
@@ -127,7 +162,6 @@
     box-shadow: unset !important;
     color: var(--unnamed-color-blue);
     font-weight: 600;
-    font-size: 1em;
     border-bottom: 2px solid;
     border-radius: unset;
 }
@@ -138,7 +172,6 @@
     box-shadow: unset !important;
     color: var(--unnamed-color-blue);
     font-weight: 600;
-    font-size: 1em;
     border-bottom: 2px solid;
     border-radius: unset;
 }
@@ -149,7 +182,177 @@
     box-shadow: unset !important;
     color: var(--unnamed-color-blue);
     font-weight: 600;
-    font-size: 1em;
     border-bottom: 2px solid;
     border-radius: unset;
 }
+
+
+
+
+
+@media (max-width: 725px){
+    .items {
+        display: flex;
+        gap: 2px;
+        flex-direction: column;
+    }
+    .item-first {
+        border-right: unset !important;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 5%;
+    }
+    .panel-description{
+        margin-top: 0;
+    }
+    .item {
+        display: flex !important;
+        flex-direction: column;
+        border-left: 2px solid #005aab;
+        padding-left: 1px;
+        margin-bottom: 20px;
+    }
+    .item.first{
+        border-left: unset !important;
+    }
+.item-first .panel-description {
+    padding-top: 0;
+}
+.image-panel{
+    width: 53px;
+}
+.image-panel-certif{
+    width: 37px;
+}
+.item-second {
+gap: 0;
+justify-content: center;}
+
+.panel-informations {
+    gap: 9px;
+}
+.panel-number {
+    font-size: 27px;
+}
+.panel-description {
+
+text-align: start;
+font-size: 12px !important;
+}
+.dashboard-title {
+    margin-left: 5% !important;
+
+}
+.dashboard-link {
+    margin-left: 5% !important;
+}
+
+.links-section {
+    margin-left: 0;
+    width: 95%;
+    overflow-x: scroll;
+}
+.course-link {
+    font-size: 15px;
+}
+}
+
+@media(min-width: 725px) and (max-width: 1200px){
+   
+    .items {
+        display: flex;
+        gap: 2px;
+        flex-direction: column;
+    }
+    .item-first {
+        border-right: unset !important;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 5%;
+    }
+    .panel-description{
+        margin-top: 0;
+    }
+    .item {
+        display: flex !important;
+        flex-direction: column;
+        border-left: 2px solid #005aab;
+        padding-left: 28px;
+        margin-bottom: 20px;
+    }
+    .item.first{
+        border-left: unset !important;
+    }
+.item-first .panel-description {
+    padding-top: 0;
+}
+.image-panel{
+    width: 66px;
+}
+.image-panel-certif{
+    width: 46px;
+}
+.item-second {
+    gap: 59px;
+    justify-content: center;
+}
+
+.panel-informations {
+    gap: 9px;
+}
+.panel-number {
+    font-size: 27px;
+}
+.panel-description {
+
+text-align: start;
+font-size: 12px !important;
+}
+.dashboard-title {
+    margin-left: 5% !important;
+    font-size: 33px !important;
+
+}
+.dashboard-link {
+    margin-left: 5% !important;
+}
+
+.links-section {
+    margin-left: 13%;
+    width: 72%;
+}
+.course-link {
+    font-size: 15px;
+}
+.dashboard .main-container .my-courses .listing-courses{
+    width: 640px !important;
+}
+.course-info {
+
+    width: 100%;
+   
+}
+}
+@media(max-width: 300px){
+    .item-first .panel-description {
+        font-size: 21px !important;
+    }
+    .panel-description {
+        text-align: start;
+        font-size: 9px !important;
+    }
+    .panel-number {
+        font-size: 18px;
+    }
+    .course-link {
+        font-size: 11px;
+    }
+ 
+}
+
+/* .listing-courses {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  } */

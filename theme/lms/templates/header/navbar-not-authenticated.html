@@ -25,15 +25,16 @@ from six import text_type
 
 <nav class="nav-links" aria-label=${_("Supplemental Links")}>
   <div class="secondary">
-    <div>
+
       <ul class="custom-nav mobile-nav-item hidden-mobile nav-item">
               <!-- newLinks -->
               <li><a href="https://e-learning.cawtar.org">${_("HOME")}</a></li>
           <li><a href="${marketing_link('COURSES')}">${_("ALL COURSES")}</a></li>
           <li><a href="http://cawtar.org/"  target="_blank">${_("ABOUT")}</a></li>
 		  <li><a href="/about#faq-section">${_(u"FAQ")}</a></li>
-      <li><a href="https://e-learning.cawtar.org/contact"  target="_blank">${_("CONTACT")}</a></li>
+      <li><a href="https://e-learning.cawtar.org/contactus"  target="_blank">${_("CONTACT")}</a></li>
     </ul>
+    <div class="auth-section">
       % if allows_login:
         % if restrict_enroll_for_course:
           <div class="mobile-nav-item hidden-mobile nav-item mobile-pad-item">
@@ -51,14 +52,57 @@ from six import text_type
         <a class="register-btn btn mt0" href="/register${login_query()}">${_("Sign up")}</a>
       </div>
 
-      <div class="mobile-nav-item hidden-mobile nav-item mobile-pad-item" style="width: inherit;">
+
+
+
+      <div class="mobile-nav-item hidden-mobile nav-item mobile-pad-item language-selector">
+        <div class="dropdown">
+
+          <img class="dropbtn" src="/static/mitx/images/assets/icons/Group 17572.png" alt="Alternate Text" />
+
+          <div class="dropdown-content">
+
 		% if LANGUAGE_CODE == 'en':
-			<a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceAr();" style="width: 30px; min-width: 60px;"><i class="icon fa fa-globe"></i></a>
-		% else:
-			<a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceEn();" style="width: 30px; min-width: 60px;">${_("EN")}</a>
+    <ul>
+      <li>
+			<a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceAr();" style="width: 30px; min-width: 60px;">${_("Ar")}</a>
+    </li>
+    <li>
+      <a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceFr();" style="width: 30px; min-width: 60px;">${_("Fr")}</a>
+    </li>
+    </ul>
+		% elif LANGUAGE_CODE == 'ar' :
+    <ul>
+      <li>
+			<a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceEn();" style="width: 30px; min-width: 60px;">${_("En")}</a>
+    </li>
+    <li>
+      <a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceFr();" style="width: 30px; min-width: 60px;">${_("Fr")}</a>
+    </li>
+    </ul>
+    % else:
+    <ul>
+      <li>
+			<a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceEn();" style="width: 30px; min-width: 60px;">${_("En")}</a>
+    </li>
+    <li>
+      <a class="sign-in-btn btn" href="javascript:footerLanguageSelector.langSelectionForceAr();" style="width: 30px; min-width: 60px;">${_("Ar")}</a>
+    </li>
+    </ul>
 		% endif
       </div>
     </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
   </div>
 </nav>
 

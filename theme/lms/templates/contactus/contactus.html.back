@@ -1,0 +1,129 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import get_language_bidi%>
+<%inherit file="../main.html" />
+<%namespace file='../main.html' import="login_query"/>
+
+<%block name="pagetitle">${_("Contact")}</%block>
+% if get_language_bidi():
+<%
+rtl_css_file = self.attr.main_css.replace('.css', '-rtl.css')
+%>
+<link rel="stylesheet" href="/static/mitx/css/contact-rtl.css" type="text/css" media="all" />
+% else:
+<link rel="stylesheet" href="/static/mitx/css/contact.css" type="text/css" media="all" />
+% endif
+
+
+<section class="page-hero-banner contact-page-banner-contact">
+
+			<h3 class="contact-link">${_("Home/Contact")}</h3>
+            <h1 class="contact-title">${_("Contact")}</h1>
+
+</section>
+<section class="contact-page-details">
+
+	<h1 class="contact-details">${_("Contact Details")}</h1>
+	<h3 class="contact-message">${_("If you still have any questions, please contact us at our request.")}</h3>
+
+</section>
+
+<section class="contact-page-address">
+    <div class="contact-number">
+		<div class="icon-container">
+			<img class="address-icon" src="/static/mitx/images/assets/icons/phone-call.png"/>
+</div>
+<p class="first-address">+216 71 000 000</p>
+<p class="second-address">${_("We are Always happy to help")}</p>
+	</div>
+	<div class="contact-mail">
+		<div class="icon-container">
+			<img class="address-icon" src="/static/mitx/images/assets/icons/envelope.png"/>
+		</div>
+		<p class="first-address">hello@cawtar.org</p>
+		<p class="second-address">	${_("The best way to get answer faster")}</p>
+	</div>
+</section>
+
+<section class="contact-page-form">
+
+	<h1 class="contact-details">${_("GIVE US A MESSAGE")}</h1>
+	<h3 class="contact-message">${_("Feel free to get in touch with experts")}</h3>.
+	<form method="POST" >
+	<div class="row input-container">
+		<input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}" />
+		<div class="col-md-6 col-sm-12">
+			<div class="styled-input">
+				<input type="text" required name="contactFirstName" />
+				<label>${_("First Name")}</label>
+
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<div class="styled-input">
+				<input type="text" required name="contactLastName" />
+				<label>${_("Last Name")}</label>
+
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<div class="styled-input">
+				<input type="text" required name="contactPhone" />
+				<label>${_("Phone")}</label>
+
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<div class="styled-input" style="float:right;">
+				<input type="text" required name="contactEmail" />
+				<label>${_("Email")}</label>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<div class="styled-input wide">
+				<textarea required name="contactMessage"></textarea>
+				<label>${_("Message")}</label>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<div class="btn-lrg submit-btn">
+			<button type="submit">
+				${_("ENVOYER LE MESSAGE")}
+			</button>
+			</div>
+		</div>
+	</div>
+	</form>
+</section>
+
+<!--
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container contact-page-content">
+        <div class="col-md-4 block_left  wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+			<div class="leftfocus">
+			<h2 class="cal">${_("Arab Women Center for Training and Research")}</h2>
+			<div class="news_area">
+			<h3 class="titre_left">${_("Post address")}</h3>
+			<p class="address">${_("105, 1003 Green District")} <br>${_("Tunisia-Republic of Tunisia")}</p>
+			</div>
+			<div class="news_area">
+			<h3 class="titre_left">${_("Contact information")}</h3>
+			<p class="address"><strong>${_("Phone : ")}</strong><a href="tel:+21671790511">(+216) 71 790 511 </a><br><strong>${_("Fax : ")}</strong> (+216) 71 773-611 / (+216) 71 780 002 <br><strong>${_("E-mail : ")}</strong> <a href="mailto:info@cawtar.org">info@cawtar.org</a></p>
+			</div>
+			<div class="news_area">
+			<h3 class="titre_left">${_("Websites")}</h3>
+			<p class="address"><strong>${_("Media : ")}</strong><a href="mailto:media@cawtar.org" class="blue_txt"><strong>media@cawtar.org</strong></a><br><strong>${_("Finance : ")}</strong><a href="mailto:finance@cawtar.org" class="blue_txt"><strong>finance@cawtar.org</strong></a><br><strong>${_("Documentation : ")}</strong><a href="mailto:documentation@cawtar.org" class="blue_txt"><strong>documentation@cawtar.org</strong></a></p>
+			</div>
+			</div>
+			  <div class="leftfocus">
+				<iframe id="inlineFrameExample"
+					title="Inline Frame Example"
+					width="100%"
+					height="720"
+					style="border: none"
+					src='https://www.itsolution-tn.com/contact-cawtar-${_("ltr")}.php'>
+				</iframe>
+			  </div>
+		</div>
+    </section>
+</main> -->

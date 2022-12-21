@@ -1,0 +1,280 @@
+.contact-page-banner-contact {
+    height: 12vh;
+    background-color: #005aab;
+}
+
+.page-hero-banner:before {
+    background-color: #005aab !important;
+
+}
+
+.page-hero-banner {
+  background-image: none !important;
+  padding: 0 16em;
+}
+.contact-link {
+  /* margin-left: 14% !important; */
+  color: #F2B90F !important;
+  padding-top: 1%;
+  font-size: 14px;
+}
+
+.contact-title {
+  /* margin-left: 14% !important; */
+  color: white !important;
+  font-weight: 500 !important;
+  margin: 0;
+  font-size: 34px !important;
+  float: right !important;
+}
+
+
+.subtitle {
+  font-weight: 400;
+  font-size: 29px !important;
+  color: black !important;
+}
+
+.title {
+  color: #005aab;
+  margin-top: 0 !important;
+  font-weight: 200;
+  font-size: 19px;
+  padding-top: 0 !important;
+}
+
+
+.university-profile .courses-container {
+  padding: 0% 14%;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.training-section,.courses-container,.title-container{
+  padding: 3% 14% 0% !important;
+}
+
+#main{
+    background-color: #F1F8FE;
+    max-width: unset !important;
+    /* padding: 25px 14%; */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+}
+
+.choose-us{
+  background-color: #005aab;
+}
+.choose-us-title {
+  color: white;
+  margin-bottom: 0.5%;
+  font-weight: 600;
+  padding-top: 2%;
+}
+.choose-us-description{
+  color: white;
+  text-align: center;
+}
+
+.choose-us-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-top: 2%;
+  padding-bottom: 3%;
+}
+.first-card {
+  background-color: #F1F8FE;
+  text-align: center;
+  height: fit-content;
+  padding: 2% 4%;
+  min-height: 231px;
+  min-width: 237px;
+
+}
+.second-card {
+  background-color: var(--unnamed-color-yellow);
+  text-align: center;
+  height: fit-content;
+  padding: 2.3% 4%;
+  min-height: 220px;
+
+}
+.third {
+  padding: 2.5% 5%;
+  min-height: 214px;
+
+}
+
+.first-title {
+  font-size: 22px;
+  font-weight: var(--unnamed-font-weight-600);
+  color: var(--unnamed-color-blue);
+  margin-bottom: 3%;
+}
+.second-title{
+  font-size: var(--unnamed-font-size-20);
+  color:var(--unnamed-color-blue);
+}
+
+.choose-us-card-image{
+  margin-bottom: 16%;
+}
+.find-courses .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item, .university-profile .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item {
+  float: left;
+  display: block;
+  margin-right: 3% !important;
+  margin-bottom: 12% !important;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+background-color: white;
+border: unset;
+margin-right: 0 !important;
+}
+
+
+/* .courses-container .courses .courses-listing{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+} */
+
+.training1 {
+  padding: 1em 16em;
+}
+
+
+.courses-container .courses .course .course-info .course-title {
+  line-height: 19.68px;
+}
+
+
+/* responsiveness */
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+ 
+  .training1{
+    padding: 1em 6em;
+  }
+
+  .training-section, .courses-container, .title-container {
+    padding: 1em 3em!important;}
+.find-courses .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item, .university-profile .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item {
+  width: 48% !important;
+}
+.page-hero-banner {
+  padding: 0 6em;
+}
+.feedback-card {
+  width: 395px;
+  min-height: 132px;
+}
+
+}
+
+    
+  
+  
+  
+  
+  @media (min-width: 1025px) and (max-width: 1500px){
+
+
+  }
+  
+  
+  @media (min-width: 1280px){
+    
+  
+  }
+   
+
+  
+  @media (max-width: 767px){
+
+    .training1 {
+        padding: 1em 0em;
+        float: right;
+    }
+  .training-section, .courses-container, .title-container {
+    padding: 1em 1em!important;
+}
+
+  .find-courses .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item, .university-profile .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+.page-hero-banner {
+  background-image: none !important;
+  padding: 0 1em;
+}
+.choose-us-cards {
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  row-gap: 26px;
+}
+    
+
+
+  }
+
+
+.feedback-card {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+  width: 455px;
+  /* height: 23vh; */
+  margin-left: 2%;
+  /* margin-top: 4%; */
+  display: flex;
+  margin-bottom: 1%;
+  /* height: fit-content; */
+  padding: 2% 1%;
+  background-color: white;
+  min-height: 131px;
+}
+  .user {
+    display: flex;
+    margin-top: 2%;
+  }
+
+  .user img {
+    border-radius: 50%;
+    width: 58px;
+    height: 54px;
+    margin-right: 10px;
+  }
+  .user-info h5 {
+    margin: 0;
+    color: var(--unnamed-color-blue);
+    font-weight: 600;
+  }
+  .user-info small {
+    color: black;
+    font-weight: 600;
+  }
+  .feedbacks{
+    display:flex;
+    justify-content: center;
+    margin-top: 40px
+
+  }
+  .dem{
+      display: none;
+  }
+  .w4-section{
+      text-align: center;
+      padding-bottom: 3%;
+  }
+
+
+
+
+  @media (max-width: 1200px) {
+    .feedback-card {
+      width: 89%;
+  }
+  }

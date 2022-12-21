@@ -1,18 +1,13 @@
-.page-hero-banner{
-    background-image: none !important;
-}
-.dashboard-page-banner-dashboard {
-    height: 12vh;
-    background-color: #005aab;
-}
 
 .page-hero-banner:before {
-    background-color: #005aab !important;
-   
+  background-color: #005aab !important;
+  background-image: url("/static/mitx/images/assets/Component.png") !important;
+  background-size: 100% 98% !important;
 }
 
 .page-hero-banner {
-     background-image: none !important;
+  background-image: url("/static/mitx/images/assets/Component.png") !important;
+  background-size: 100% 98% !important;
      margin-bottom: 0 !important;
 }
 
@@ -22,10 +17,10 @@
     padding-top: 1%;
 }
 
-.dashboard-title{
-    margin-left:15% !important;
-    color:white !important;
-    font-weight: bold !important;
+.dashboard-title {
+  margin-left: 15% !important;
+  color: white !important;
+  font-weight: 400 !important;
 }
 .page-hero-banner .container {
     padding-top: 0;
@@ -126,14 +121,16 @@
     width: 35%;
     /* text-align: center; */
     padding-left: 34%;
+    padding-bottom: 2%;
+    font-weight: 200;
 }
 
 .contact-button {
-    background-color: #005aab;
-    color: white;
-    width: 11%;
-    padding: 1% 1%;
-    margin: 2% 43%;
+  background-color: #005aab;
+  color: white;
+  width: 13%;
+  padding: 1% 1%;
+  margin: auto;
 }
 .contact-button a{
     color: white;
@@ -145,4 +142,61 @@
 padding-right: 0 !important;
     max-width: 100% !important;
     overflow-x: hidden;
+}
+
+
+@media (max-width: 767px){
+
+  .page-hero-banner {
+   
+    padding: 2px 4px;
+}
+.dashboard-link {
+  margin-left: 20px !important;
+  padding-top: 25px;
+}
+.dashboard-title {
+  margin-left: 4% !important;
+  
+}
+#faq-section .section-title {
+  padding: 0 0 0 4%;
+  font-weight: 400;
+}
+#faq-section {
+  margin-top: 9px;
+
+}
+.accordion {
+  
+  width: 92%;
+  padding: 1% 6%;
+}
+.answer {
+  width: unset;
+  padding-left: 0px;
+  font-weight: 200;
+}
+.contact-button {
+  width: fit-content;
+ 
+  font-size: 15px;
+  padding: 10px 10px;
+
+}
+
+
+.question{
+  font-weight: 400;
+}
+
+}
+
+@media (min-width: 500px) and (max-width: 767px){
+  .answer {
+  
+    padding-left: 8px;
+  
+  }
+ 
 }

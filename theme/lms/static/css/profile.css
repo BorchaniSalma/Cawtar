@@ -1,0 +1,129 @@
+.view-profile .wrapper-profile .profile .profile-header-container .profile-header {
+    background-image: url(/static/mitx/images/assets/about.png) !important;
+    padding-right: 0 !important;
+    max-width: unset !important;
+    background-position: center;
+    height:38vh;
+    padding: 0 17em;
+    background-size: cover;
+}
+.content-wrapper {
+    max-width: 100% !important;
+ 
+}
+#main, .container, .course-tabs, body.view-in-course .container, body.view-in-course .content-wrapper, .wrapper-preview-menu .preview-menu, .content-wrapper .page-content-container {
+ 
+ 
+    overflow-x: hidden !important;
+}
+
+.contact-link {
+    color: #F2B90F !important;
+    padding-top: 1%;
+    font-size: 14px;
+    padding-bottom: 22px;
+}
+.header {
+    /* margin-left: 14% !important; */
+    color: white !important;
+    font-weight: 500 !important;
+    margin: 0;
+    font-size: 40px !important;
+}
+.view-profile .wrapper-profile .profile .profile-header-container .profile-header .subheader {
+
+    color: white !important;
+}
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one {
+    position: absolute !important;
+    top: 26% !important;
+    border: 2px solid var(--unnamed-color-blue) !important;
+    min-height: 33vh;
+}
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one .profile-image-field .u-field-image .image-wrapper .image-frame {
+    margin-top: 8px;
+}
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one .profile-section-one-fields .u-field.u-field-username {
+    border-bottom: 1px solid var(--unnamed-color-blue) !important;
+   
+}
+
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one .profile-section-one-fields .u-field.u-field-username .u-field-value {
+    color:grey  ;
+    font-size: 20px;
+    text-align: center;
+}
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-two .wrapper-profile-bio, .view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-two .learner-achievements-container {
+    background: #fff !important;
+    height: 76vh !important;
+    position: absolute !important;
+    width: 38% !important;
+    top: 26% !important;
+    border: 2px solid var(--unnamed-color-blue) !important;
+    text-align: center !important;
+}
+.view-profile .wrapper-profile .profile .profile-sections-container {
+    background: white !important;
+    height: 72vh;
+}
+
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-two .wrapper-profile-bio .wrapper-profile-section-two {
+    padding: 0px !important;
+}
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one .profile-section-one-fields .u-field.u-field-name .u-field-value {
+    color: var(--unnamed-color-blue) !important;
+    text-align: center !important;
+    font-weight: 400;
+ 
+}
+
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one .profile-section-one-fields .u-field:not(.u-field-name):not(.u-field-username) {
+    border-bottom: 2px solid  var(--unnamed-color-blue) !important;
+   
+}
+
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one .profile-section-one-fields .u-field:not(.u-field-name):not(.u-field-username) .u-field-title {
+
+    color: var(--unnamed-color-blue);
+    font-weight: 300;
+}
+
+.view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one .profile-section-one-fields .u-field:not(.u-field-name):not(.u-field-username) .u-field-value-readonly {
+ 
+    color: var(--unnamed-color-blue);
+}
+
+
+@media (max-width: 770px){
+    .view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-two .wrapper-profile-bio, .view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-two .learner-achievements-container {
+        height: 76vh !important;
+        width: 82% !important;
+        top: 57% !important;
+    }
+    .view-profile .wrapper-profile .profile .profile-header-container .profile-header {
+        padding-right: 0 !important;
+        max-width: unset !important;
+        height:38vh;
+        padding: 0 1em;
+    }
+    .view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-one .wrapper-profile-section-one {
+        min-height: 33vh;
+        top: 17% !important;
+    }
+    .view-profile .wrapper-profile .profile .profile-sections-container {
+        height: 150vh;
+    }
+
+    
+}
+@media (min-width: 771px) and (max-width:1500px){
+    .view-profile .wrapper-profile .profile .profile-header-container .profile-header {
+     
+        padding: 0 4em;
+    }
+    .view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-two .wrapper-profile-bio, .view-profile .wrapper-profile .profile .profile-sections-container .wrapper-profile-sections .wrapper-profile-section-container-two .learner-achievements-container {
+      
+        right: 12%;
+    }
+    
+}

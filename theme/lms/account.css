@@ -1,0 +1,119 @@
+.wrapper-account-settings .account-settings-container .wrapper-header {
+    background-image: url(/static/mitx/images/assets/about.png) !important;
+    padding-right: 0 !important;
+    max-width: unset !important;
+    background-position: center;
+    height:38vh;
+    padding: 0 17em;
+}
+
+#main, .container, .course-tabs, body.view-in-course .container, body.view-in-course .content-wrapper, .wrapper-preview-menu .preview-menu, .content-wrapper .page-content-container {
+ 
+    max-width: 100% !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+.wrapper-account-settings .account-settings-container {
+    max-width: 87% !important;
+
+}
+
+.wrapper-account-settings .account-settings-container .wrapper-header .header-title {
+   
+    color: white;
+    padding-top:94px;
+    font-size: 37px !important;
+}
+
+.wrapper-account-settings .account-settings-container .wrapper-header .account-nav .account-nav-link.active {
+    color:var(--unnamed-color-yellow)
+}
+.wrapper-account-settings .account-settings-container .wrapper-header .account-nav .account-nav-link {
+    border: unset !important;
+    color: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 5px 0 10px 0;
+    min-width: 0;
+    margin-right: 30px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.wrapper-account-settings .account-settings-container .account-settings-sections .section {
+ 
+    border: 1px solid var(--unnamed-color-blue) !important;
+    padding: 0 3em !important;
+}
+
+.account-settings-sections .section-header {
+    color: var(--unnamed-color-blue);
+}
+
+.wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body {
+    border-top: 5px solid var(--unnamed-color-blue) !important;
+}
+.wrapper-account-settings .account-settings-container .account-settings-sections .section #account-deletion-container .account-settings-header-subtitle:first-of-type {
+    border-bottom: 4px solid  var(--unnamed-color-blue) !important;
+
+}
+.wrapper-account-settings .account-settings-container .account-settings-sections .section:last-of-type .account-settings-section-body {
+    border-top-width: 0 !important;
+}
+
+.wrapper-account-settings .account-settings-container .account-settings-sections {
+    margin: auto !important;
+    padding: 1em 14em;
+}
+.wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .field-label {
+    color: var(--unnamed-color-blue) !important;
+    
+    font-weight: 400 !important;
+  
+}
+.wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-header-subtitle {
+    color: grey !important;
+  
+}
+
+
+
+
+@media (max-width: 759px){
+    .wrapper-account-settings .account-settings-container .wrapper-header {
+        background-position: right;
+        padding: 0 3em;
+    }
+    .wrapper-account-settings .account-settings-container .account-settings-sections {
+        margin: auto !important;
+        padding: 1em 1em !important;
+        width: 100% !important;
+    }
+    .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value .field-input#field-input-name, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value #field-input-name.wrapper-custom-select, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value .field-input#field-input-email, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value #field-input-email.wrapper-custom-select, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value .field-input#field-input-social_links_twitter, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value #field-input-social_links_twitter.wrapper-custom-select, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value .field-input#field-input-social_links_facebook, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value #field-input-social_links_facebook.wrapper-custom-select, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value .field-input#field-input-social_links_linkedin, .wrapper-account-settings .account-settings-container .account-settings-sections .section .account-settings-section-body .u-field .u-field-value #field-input-social_links_linkedin.wrapper-custom-select {
+        width: 235px !important;
+    }
+    .wrapper-account-settings .account-settings-container .account-settings-sections .section {
+        padding: 0 0.5em !important;
+    }
+}
+@media (min-width: 760px) and (max-width:1200px){
+   
+    .wrapper-account-settings .account-settings-container .account-settings-sections {
+        margin: auto !important;
+        padding: 1em 1em;
+    }
+    .wrapper-account-settings .account-settings-container .wrapper-header {
+        background-image: url(/static/mitx/images/assets/about.png) !important;
+        padding-right: 0 !important;
+        max-width: unset !important;
+        background-position: left;
+        height: 24vh;
+        padding: 0 7em;
+    }
+    .wrapper-account-settings .account-settings-container {
+        max-width: 86% !important;
+    }
+  
+}

@@ -14,6 +14,7 @@
 
 
 ## WARNING: These files are specific to edx.org and are not used in installations outside of that domain. Open edX users will want to use the file "footer.html" for any changes or overrides.
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/footer.css">
 <footer id="footer-edx-v3" role="contentinfo" aria-label="${_("Page Footer")}"
   ## When rendering the footer through the branding API,
   ## the direction may not be set on the parent element,
@@ -22,19 +23,17 @@
     dir=${bidi}
   % endif
 >
-<link rel="stylesheet" type="text/css" href="/static/mitx/css/footer.css">
 
-<div class="container">
-    <div class="row main-row"><!-- row -->
-        <div class="col-xl-2 col-lg-12 col-md-2 col-sm-8 col-xs-10 column-1 flex-column column-styles">
-            <div class="row">
-                <div class="col-12 column-2-2 column-styles">
-                <div class="edx-footer-logo">
+<div class="footer-flex">
+    <div class="footer-logo"><!-- row -->
                     <a href="${marketing_link('ROOT')}">
-                        <img alt="${_('edX Home Page')}" src="/static/mitx/images/logo2.png" width="110">
+                        <img class="image-logo"alt="${_('edX Home Page')}" src="/static/mitx/images/assets/logo cawtar FR.png" width="110">
                     </a>
+                    % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+                    <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+                    % endif
                 </div>
-
+<!-- 
                               <p class="copyright" style="margin-top:0px; font-size:14px;">${_(
                                   u"All rights reserved \u00A9 {platform_name} {year}").format(year=datetime.datetime.now().year, platform_name=settings.PLATFORM_NAME)}
                                   <br/>
@@ -44,98 +43,74 @@
                                         ${u" {icp}".format(icp=icp_license_info.get('icp_license'))}
                                     </a>
                                   % endif
-                              </p>
-                % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-                <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-                % endif
-                </div>
-            </div>
+                              </p> -->
+                              <div class="footer-links">
+                                  <div class="first-list">
+                                  <div class="footer-list">
+                                           <h2 class="heading" >${_(u"Explore")}</h2>
+                                           <ul class="list-unstyled clear-margins  ">
+                                             <li>
+                                                 <a href="https://e-learning.cawtar.org">${_(u"Home")}</a>
+                                             </li>
+                                             <li>
+                                               <a href="${marketing_link('COURSES')}">${_(u"All Courses")}</a>
+                                           </li>
+                                           <li>
+                                             <a href="http://cawtar.org/">${_(u"About")}</a>
+                                         </li>
+                                             
+                                           </ul>
+                                     </div>
+                                     <div class="footer-list">
+                                        <h2 class="heading" >${_(u"Support")}</h2>
+                                        <ul class="list-unstyled clear-margins  ">
+                                            <li>
+                                              <a href="/privacy">${_(u"Privacy Policy")}</a>
+                                            </li>
+                                            <li>
+                                              <a href="/tos">${_(u"Terms of Service")}</a>
+                                            </li>
+                                            <li>
+                                              <a href="https://e-learning.cawtar.org/contactus">${_(u"Contact Us")}</a>
+                                            </li>
+                                            <li>
+                                              <a href="/about#faq-section">${_(u"FAQ")}</a>
+                                            </li>
+                                        </ul>
+                                  </div>
+                                  </div>
+                                  <div class="second-list">
+                                  <div class="footer-list">
 
-        </div>
-        <div class="col-xl-4 col-lg-8 col-md-9 col-sm-5 col-xs-12 column-2 flex-column column-styles"style="border: unset;">
-             <div class="row full-height">
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column-2-1 third-div-border column-styles its-footer1"style="border: unset;">
-                <div class="row full-height">
-                  <div class="col-lg-12 col-md-12 col-sm-10 full-height column-2-2 column-styles its-footer2">
-                        <h2 class="heading" >${_(u"Explore")}</h2>
-                        <ul class="list-unstyled clear-margins  ">
-                          <li>
-                              <a href="/#news-list">${_(u"Home")}</a>
-                          </li>
-                          <li>
-                            <a href="/#news-list">${_(u"All Courses")}</a>
-                        </li>
-                        <li>
-                          <a href="/#news-list">${_(u"About")}</a>
-                      </li>
-                          
-                        </ul>
-                  </div>
-                </div>
-           </div>
-                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column-2-1 second-div-border column-styles its-footer1"style="border-left: unset;">
-                        <div class="row full-height">
-                            <div class="col-lg-12 col-md-12 col-sm-10 column-2-2 full-height column-styles">
-                                  <h2 class="heading" >${_(u"Support")}</h2>
+                                    <h2 class="heading" >${_(u"Join Us")}</h2>
                                     <ul class="list-unstyled clear-margins  ">
                                         <li>
-                                          <a href="/privacy">${_(u"Privacy Policy")}</a>
+                                          <a href="wwww.facebook.com">${_(u"Facebook")}</a>
                                         </li>
                                         <li>
-                                          <a href="/tos">${_(u"Terms of Service")}</a>
+                                          <a href="www.twitter.com">${_(u"Twitter")}</a>
                                         </li>
                                         <li>
-                                          <a href="https://e-learning.cawtar.org/contact">${_(u"Contact Us")}</a>
+                                          <a href="www.youtube.com">${_(u"Youtube")}</a>
                                         </li>
                                         <li>
-                                          <a href="/about#faq-section">${_(u"FAQ")}</a>
+                                          <a href="wwww.linkedin.com">${_(u"Linkedin")}</a>
                                         </li>
                                     </ul>
-                            </div>
-                          </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column-2-1 second-div-border column-styles its-footer1"style="border-left: unset;">
-                  <div class="row full-height">
-                      <div class="col-lg-12 col-md-12 col-sm-10 column-2-2 full-height column-styles">
-                            <h2 class="heading" >${_(u"Join Us")}</h2>
-                              <ul class="list-unstyled clear-margins  ">
-                                  <li>
-                                    <a href="/privacy">${_(u"Facebook")}</a>
-                                  </li>
-                                  <li>
-                                    <a href="/tos">${_(u"Twitter")}</a>
-                                  </li>
-                                  <li>
-                                    <a href="https://e-learning.cawtar.org/contact">${_(u"Youtube")}</a>
-                                  </li>
-                                  <li>
-                                    <a href="/about#faq-section">${_(u"Linkedin")}</a>
-                                  </li>
-                              </ul>
-                      </div>
-                    </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column-2-1 second-div-border column-styles its-footer1"style="border-left: unset;">
-            <div class="row full-height">
-                <div class="col-lg-12 col-md-12 col-sm-10 column-2-2 full-height column-styles">
-                      <h2 class="heading" >${_(u"Visit")}</h2>
+                              </div>
+                              <div class="footer-list">
+                                <h2 class="heading" >${_(u"Visit")}</h2>
                         <ul class="list-unstyled clear-margins  ">
                             <li>
-                              <a href="/privacy">${_(u"Privacy Policy")}</a>
-                            </li>
-                            <li>
-                              <a href="/tos">${_(u"Terms of Service")}</a>
-                            </li>
-                            <li>
-                              <a href="https://e-learning.cawtar.org/contact">${_(u"Contact Us")}</a>
-                            </li>
-                            <li>
-                              <a href="/about#faq-section">${_(u"FAQ")}</a>
+                              <p>${_(u"R5QW+WW3, Centre Urbain Nord, Tunis")}</p>
                             </li>
                         </ul>
-                </div>
-              </div>
-    </div>
+                          </div>
+                            </div>
+                        
+            
+        </div>
+       
 
 
               ## The Open edX link may be hidden when this view is served

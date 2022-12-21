@@ -1,9 +1,19 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import ugettext as _
+
+from django.utils.translation import get_language_bidi
+size = "14" if get_language_bidi() else "12" %>
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("About")}</%block>
+% if get_language_bidi():
+<%
+rtl_css_file = self.attr.main_css.replace('.css', '-rtl.css')
+%>
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/faq-rtl.css">
+% else:
 <link rel="stylesheet" type="text/css" href="/static/mitx/css/faq.css">
+% endif
 <section class="page-hero-banner dashboard-page-banner-dashboard">
     
     <h3 class="dashboard-link">${_("Home/FAQ")}</h3>
@@ -60,9 +70,9 @@
         </div>
     </section>
     <section class="contact-question">
-     <h1 class="question">You still have a question?</h1>
-     <h3 class="answer">if you cannot find answer to your question in our FAQ, you can Always contact us. We will answer to you shortly! </h3>
-    <div class="contact-button"> <a style="color: white;"href="/contactus" >Contact Us</a> </div>
+     <h1 class="question">${_("You still have a question?")}</h1>
+     <h3 class="answer">${_("if you cannot find answer to your question in our FAQ, you can Always contact us. We will answer to you shortly!")}</h3>
+    <div class="contact-button"> <a style="color: white;"href="/contactus" >${_("Contact Us")}</a> </div>
     </section>
 <script type="text/javascript" src="/static/mitx/js/accordion.js"></script>
 </main>

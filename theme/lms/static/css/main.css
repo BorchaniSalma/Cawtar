@@ -8,6 +8,7 @@
     --unnamed-color-greyBlue:#475677;
     --unnamed-color-green:#009E41;
     --unnamed-color-light-grey:#F5F5F5;
+    --unnamed-color-ECF3F9:#ECF3F9;
 
 
     /*font-sizes */
@@ -44,3 +45,21 @@ body{
 *:not(.icon,.fa){
     font-family: 'Poppins';
 }
+
+.page-hero-banner:before {
+    background-color: #005aab !important;
+    background-image: url("/static/mitx/images/assets/Component.png") !important;
+    background-size: 100% 98% !important;
+  }
+
+  .page-hero-banner:before {
+    background-color: #005aab !important;
+    background-image: url("/static/mitx/images/assets/Component.png") !important;
+    background-size: 100% 98% !important;
+  }
+
+  .page-hero-banner {
+    background-image: url("/static/mitx/images/assets/Component.png") !important;
+    background-size: 100% 98% !important;
+       margin-bottom: 0 !important;
+  }

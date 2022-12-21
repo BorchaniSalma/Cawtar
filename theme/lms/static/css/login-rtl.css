@@ -28,7 +28,7 @@
 .login-register-content #login-and-registration-container .form-type #register-form {
     box-shadow: none !important;
     width: 80% !important;
-    margin-right: 21% !important;
+    margin-right: 4% !important;
 }
 .login-register-content #login-and-registration-container .form-type #login-form {
     box-shadow: none !important;
@@ -36,6 +36,9 @@
     margin-left: 21% !important;
     margin-right: 10%;
 
+}
+.form-title1{
+float: right;
 }
 .textor {
     color: grey !important;
@@ -96,11 +99,11 @@
 .left-section {
     width: 100% !important;
 }
+
 .login-welcome-container {
-    background-color: #005aab;
-    width: 54%;
-    height: 92vh;
-}
+    background-image: url("/static/mitx/images/assets/login.png") ;    
+        width: 54%;
+        height: 92vh;}
 .login-welcome-container h1 {
     color: white;
     font-weight: bold;
@@ -139,7 +142,7 @@ div#login-form h2.form-title1 {
     max-height: fit-content !important; */
 }
 .register-welcome-container {
-    background-color: #005aab;
+    background-image: url("/static/mitx/images/assets/register.png");
     /* height: 68vh;
     padding-right: 60% !important;
     margin-left: 150%;

@@ -2,6 +2,7 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
 import math
+
 from datetime import datetime, timedelta
 from django.utils.translation import ugettext as _
 from django.utils.translation import pgettext
@@ -15,6 +16,8 @@ from openedx.core.djangoapps.content.course_overviews.models import CourseOvervi
 from openedx.core.djangolib.markup import HTML, Text
 from openedx.core.lib.courses import course_image_url
 from six import string_types, text_type
+from django.utils.translation import get_language_bidi
+size = "14" if get_language_bidi() else "12" 
 %>
 
 <%inherit file="../main.html" />
@@ -22,7 +25,13 @@ from six import string_types, text_type
   ## OG (Open Graph) title and description added below to give social media info to display
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
 </%block>
-
+<link href="static/css/vendors/font-awesome.min.css" rel="stylesheet">
+<link href="static/css/dicons.css" rel="stylesheet">
+<link href="static/css/vendors/bootstrap.min.css" rel="stylesheet">
+<link href="static/css/vendors/swiper.min.css" rel="stylesheet">
+<link href="static/css/custom/home.min.css?v=1.1" rel="stylesheet" type="text/css">
+<link href="static/css/vendors/bootstrap_ar.css" rel="stylesheet">
+<link href="static/css/style_ar.css?v=1.1" rel="stylesheet">
 <%block name="js_extra">
   <script type="text/javascript">
   (function() {
@@ -31,7 +40,7 @@ from six import string_types, text_type
       event.preventDefault();
     });
 
-    % if can_add_course_to_cart:
+    %if can_add_course_to_cart:
       add_course_complete_handler = function(jqXHR, textStatus) {
         if (jqXHR.status == 200) {
           location.href = "${cart_link | n, decode.utf8}";
@@ -109,6 +118,12 @@ from six import string_types, text_type
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default}</%block>
+<link rel="stylesheet" type="text/css" href="/static/mitx/css/Instructor-card.css" />
+% if get_language_bidi():
+ <link rel="stylesheet" type="text/css" href="/static/mitx/css/course-about-rtl.css">
+% else:
+ <link rel="stylesheet" type="text/css" href="/static/mitx/css/course-about.css">
+% endif
 
 <section class="course-info">
 
@@ -119,6 +134,7 @@ from six import string_types, text_type
       <section class="intro">
         <div class="heading-group">
           <!--span class="course-num">${_("{course_name}").format(course_name=course.display_number_with_default)}</span-->
+          <h3 class="heading-title">${_("Cawtar")}</h3>
           <h1>
             ${course.display_name_with_default}
           </h1>
@@ -219,10 +235,53 @@ from six import string_types, text_type
         <div class="hero">
           <img src="${course_image_urls['large']}" alt="" />
         </div>
+        <div>
+          <h4 class="media-title">This course includes:</h4>
+          <div class="first-box"><img src="/static/mitx/images/assets/icons/Group 17863.png">Accées Sur pc,tablette et téléphone</div>
+          <div class="first-box"><img src="/static/mitx/images/assets/icons/winner.png">Certificat de fin de formation</div>
+        </div>
       </div>
       % endif
     </div>
       </div>
+      <div class="panel-container">
+        <div class="panel">
+        <div class="row">
+          <div class="col"><h2 class="panel-number">${_("Time")}</h2> <h3 class="panel-description">  
+            % if get_course_about_section(request, course, "effort"):
+             ${get_course_about_section(request, course, "effort")}
+            % else :
+             ${_("-")}
+            % endif
+            </h3>
+          </div>
+          <div class="col second"><h2 class="panel-number">${_("Length")}</h2><h3 class="panel-description">${_('{number} weeks').format(number=15)}</h3> </div>
+          <div class="col"><h2 class="panel-number">${_("Language")}</h2> <h3 class="panel-description">
+          % if course.language == 'ar' :
+            ${_("Arabic")}
+          % elif course.language == 'fr':
+          ${_("French")}
+          % else :
+            $_("English")
+          % endif
+          </h3> </div>
+          <%
+          course_created_year = CourseOverview.get_from_id(CourseKey.from_string(text_type(course.id))).created.strftime('%Y')
+        %>
+          <div class="col last"><h2 class="panel-number">${_("Year Created")}</h2> <h3 class="panel-description">${_(course_created_year)}</h3> </div>
+         </div>
+         <div class="mediaMobile">
+          <div class="hero">
+            <img class="course-image" src="${course_image_urls['large']}" alt="" />
+          </div>
+          <div>
+            <h4 class="media-title">This course includes:</h4>
+            <div class="first-box"><img src="/static/mitx/images/assets/icons/Group 17863.png">Accées Sur pc,tablette et téléphone</div>
+            <div class="first-box"><img src="/static/mitx/images/assets/icons/winner.png">Certificat de fin de formation</div>
+          </div>
+        </div>
+        </div>
+        </div>
   </header>
   </%block>
 
@@ -242,7 +301,7 @@ from six import string_types, text_type
     </div>
     </%block>
 
-    <div class="course-sidebar">
+    <!-- <div class="course-sidebar">
       <div class="course-summary">
 
         <%block name="course_about_important_dates">
@@ -333,7 +392,7 @@ from six import string_types, text_type
           </li>
         </ol>
         </%block>
-    </div>
+    </div> -->
 
       <%block name="course_about_reviews_tool">
       ## Course reviews tool

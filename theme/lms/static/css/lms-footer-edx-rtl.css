@@ -753,7 +753,8 @@ footer#footer-edx-v3 .app-link img {
 	height: 40px;
 	max-width: 200px
 }
-
+footer#footer-edx-v3 {
+background-color: #fcfcfc;}
 @media print {
 	footer#footer-edx-v3 .site-details p {
 		float: right

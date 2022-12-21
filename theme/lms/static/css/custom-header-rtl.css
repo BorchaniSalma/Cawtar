@@ -1,0 +1,63 @@
+.heading-group {
+    height: 40vh;
+    padding: 5% 19% 1%;
+}
+.heading-title2{
+color:white;
+font-size: 39px;
+}
+.action-resume-course {
+    width: 46% !important;
+    float: none !important;
+    padding: 12px 10px 11px 20px !important;
+    background: var(--unnamed-color-yellow) !important;
+    border-color: var(--unnamed-color-yellow) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-radius: 4px !important;
+    display: block !important;
+    color: var(--unnamed-color-blue) !important;
+    margin-top: 4%;
+}
+.course-view .page-header {
+    background: var(--unnamed-color-blue);
+    border: none;
+    margin-bottom: 30px;
+    color: white;
+}
+.course-view .course-outline .block-tree .outline-item .accordion-trigger .fa {
+    color: var(--unnamed-color-yellow);
+}
+.content-wrapper .course-tabs .nav-item.active .nav-link, .content-wrapper .course-tabs .nav-item:hover .nav-link {
+    border-bottom-color: var(--unnamed-color-border-blue);
+    color: var(--unnamed-color-blue);
+}
+
+
+.panel .row .col {
+    display: flex;
+    border-left: 1px solid;
+    border-right: unset !important;
+    height: 71px;
+    margin-top: 1.7%;
+    flex-direction: column;
+    justify-content: center;
+    width: 17%;
+    flex-basis: unset;
+    flex-grow: unset;
+}
+
+
+@media (max-width: 767px){
+    .heading-group {
+        padding: 5% 2% 1%;
+    }
+}
+
+
+@media (min-width: 767px) and (max-width:1200px){
+    .heading-group {
+        height: 30vh;
+        padding: 1% 19% 1%;
+    }
+}

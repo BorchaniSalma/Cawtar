@@ -28,13 +28,13 @@
 .login-register-content #login-and-registration-container .form-type #register-form {
     box-shadow: none !important;
     width: 80% !important;
-    margin-left: 21% !important;
+    margin-left: 11% !important;
 }
 .login-register-content #login-and-registration-container .form-type #login-form {
     box-shadow: none !important;
-    width: 40% !important;
-    margin-left: 21% !important;
-    margin-right: 10%;
+    width: unset !important;
+    margin-left: 0% !important;
+    margin-right: 0%;
 
 }
 .textor {
@@ -95,11 +95,14 @@
 
 .left-section {
     width: 100% !important;
+    display: flex;
+    justify-content: center;
+    min-height: 92.1vh;
+    height: auto;
 }
 .login-welcome-container {
-    background-color: #005aab;
+background-image: url("/static/mitx/images/assets/login.png") ;    
     width: 54%;
-    height: 92vh;
 }
 .login-welcome-container h1 {
     color: white;
@@ -139,7 +142,7 @@ div#login-form h2.form-title1 {
     max-height: fit-content !important; */
 }
 .register-welcome-container {
-    background-color: #005aab;
+    background-image: url("/static/mitx/images/assets/register.png");
     /* height: 68vh;
     padding-right: 60% !important;
     margin-left: 150%;
@@ -160,7 +163,7 @@ div#login-form h2.form-title1 {
     font-weight: bold;
     margin-top: 48%;
     font-size: 49px;
-    width: 51%;
+    width: 55%;
     text-align: left;
     padding-left: 13%;
 }
@@ -187,13 +190,29 @@ div#login-form h2.form-title1 {
         width:35% !important;
     }
     .login-register-content #login-and-registration-container .form-type #register-form {
-        margin-left: 8% !important;
+        margin-left: 11% !important;
     }
+    .register-welcome-container p {
+        color: white;
+        font-size: 17px;
+        width: 66%;
+        line-height: 1.3em;
+        margin-left: 20%;
+        margin-right: 15%;
+    }
+    .register-welcome-container h1 {
+   
+        font-size: 40px;
+   
+       
+    }
+
+    
 }
 
 
 
-@media (min-width: 1024px){
+@media (min-width: 1025px){
   
     /* Register */
     .right-section{
@@ -203,11 +222,13 @@ div#login-form h2.form-title1 {
     .register-welcome-container {
         width:42% !important;
     }
-
+  
 
     /* Login */
   
 }
+
+
 
 
 @media (min-width: 1280px){
@@ -228,9 +249,10 @@ div#login-form h2.form-title1 {
 @media (max-width: 767px){
     /* Register */
 
-    .right-section{
-        margin-left:2% !important;
-        
+    .right-section {
+        margin-left: 2% !important;
+        display: flex;
+        justify-content: center;
     }
     .register-welcome-container {
 display: none;    }
@@ -240,7 +262,21 @@ display: none;    }
     .login-welcome-container{
         display: none;
     }
+    .login-register-content #login-and-registration-container .form-type #register-form {
+        box-shadow: none !important;
+        width: unset !important;
+       margin-left: 0% !important;
+    }
 
 
     
 }
+
+@media (max-width: 300px){
+.login-register-content #login-and-registration-container .form-type .form-wrapper {
+  
+    padding: 12px;
+
+}
+}
+
